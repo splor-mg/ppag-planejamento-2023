@@ -1,0 +1,34 @@
+name: ppag2023-dadosmg
+resources:
+  - name: acoes_planejamento
+    path: data/acoes_planejamento.csv
+    format: csv
+    encoding: utf-8-sig
+    dialect:
+      csv:
+        delimiter: ;
+    schema: schemas/acoes_planejamento/latest.yaml
+  - name: indicadores_planejamento
+    path: data/indicadores_planejamento.csv
+    format: csv
+    encoding: utf-8-sig
+    dialect:
+      csv:
+        delimiter: ;
+    schema: schemas/indicadores_planejamento/latest.yaml
+  - name: localizadores_todos_planejamento
+    path: data/localizadores_todos_planejamento.csv
+    format: csv
+    encoding: utf-8-sig
+    dialect:
+      csv:
+        delimiter: ;
+    schema: schemas/localizadores_todos_planejamento/latest.yaml
+  - name: programas_planejamento
+    path: data/programas_planejamento.csv
+    format: csv
+    encoding: utf-8-sig
+    dialect:
+      csv:
+        delimiter: ;
+    schema: schemas/programas_planejamento/latest.yaml
