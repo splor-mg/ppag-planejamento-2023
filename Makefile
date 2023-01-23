@@ -17,7 +17,7 @@ infer:  ## Infer table schema for files in data/staging/ and store under schemas
 validate-raw: $(REPORTS_RAW)
 
 $(REPORTS_RAW): reports/raw/%.json: data/raw/%.txt schemas/raw/%.yaml
-	frictionless validate --dialect '{"delimiter": "|"}' --json --schema schemas/raw/$*.yaml data/raw/$*.txt > $@
+	frictionless validate --dialect '{"delimiter": "|"}' --format csv --json --schema schemas/raw/$*.yaml data/raw/$*.txt > $@
 
 clean:
 	rm -f schemas/raw/* data/raw/* reports/raw/*
