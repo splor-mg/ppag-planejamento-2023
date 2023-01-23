@@ -32,8 +32,8 @@ $(REPORTS): reports/%.json: data/%.csv schemas/%.yaml
 	frictionless validate --resource-name $* datapackage.yaml > $@
 
 clean:
-    find reports -type f -name "*.json" | xargs rm
-    find data -type f -name "*.csv" | xargs rm
+	find reports -type f -name "*.json" | xargs rm
+	find data -type f -name "*.csv" | xargs rm
 
 print: 
 	@echo $(TABLESCHEMA_RAW)
