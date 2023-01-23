@@ -7,7 +7,7 @@ resources:
     dialect:
       csv:
         delimiter: ;
-    schema: schemas/acoes_planejamento/latest.yaml
+    schema: schemas/acoes_planejamento.yaml
   - name: indicadores_planejamento
     path: data/indicadores_planejamento.csv
     format: csv
@@ -15,7 +15,7 @@ resources:
     dialect:
       csv:
         delimiter: ;
-    schema: schemas/indicadores_planejamento/latest.yaml
+    schema: schemas/indicadores_planejamento.yaml
   - name: localizadores_todos_planejamento
     path: data/localizadores_todos_planejamento.csv
     format: csv
@@ -23,7 +23,7 @@ resources:
     dialect:
       csv:
         delimiter: ;
-    schema: schemas/localizadores_todos_planejamento/latest.yaml
+    schema: schemas/localizadores_todos_planejamento.yaml
   - name: programas_planejamento
     path: data/programas_planejamento.csv
     format: csv
@@ -31,4 +31,4 @@ resources:
     dialect:
       csv:
         delimiter: ;
-    schema: schemas/programas_planejamento/latest.yaml
+    schema: schemas/programas_planejamento.yaml

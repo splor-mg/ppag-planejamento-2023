@@ -1,0 +1,53 @@
+fields:
+  - name: codigo_do_programa
+    type: integer
+  - name: nome_do_programa
+    type: string
+  - name: exclusao_logica_do_programa
+    type: boolean
+  - name: indicador
+    type: string
+  - name: exclusao_logica_do_indicador
+    type: boolean
+  - name: unidade_de_medida
+    type: string
+  - name: indice_de_referencia
+    type: string
+  - name: em_apuracao_indice_de_referencia
+    type: string
+  - name: data_de_apuracao
+    type: string
+  - name: previsao_para_2023
+    type: string
+  - name: em_apuracao_2023
+    type: string
+  - name: previsao_para_2024
+    type: string
+  - name: em_apuracao_2024
+    type: string
+  - name: previsao_para_2025
+    type: string
+  - name: em_apuracao_2025
+    type: string
+  - name: previsao_para_2026
+    type: string
+  - name: em_apuracao_2026
+    type: string
+  - name: fonte
+    type: string
+  - name: periodicidade
+    type: string
+  - name: base_geografica
+    type: string
+  - name: formula_de_calculo
+    type: string
+  - name: justificativa_do_status_em_apuracao_da_s_previsao_es_do_s_indice_s
+    type: string
+  - name: justificativa_do_status_em_apuracao_do_indice_de_referencia
+    type: string
+  - name: data_alteracao
+    type: string
+  - name: indicador_novo
+    type: boolean
+  - name: polaridade
+    type: string

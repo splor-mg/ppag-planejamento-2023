@@ -1,0 +1,59 @@
+fields:
+  - name: codigo_do_programa
+    type: integer
+  - name: nome_do_programa
+    type: string
+  - name: exclusao_logica_do_programa
+    type: string
+  - name: programa_novo
+    type: string
+  - name: codigo_da_area_tematica
+    type: string
+  - name: area_tematica
+    type: string
+  - name: codigo_do_objetivo_estrategico
+    type: integer
+  - name: objetivo_estrategico
+    type: string
+  - name: codigo_da_diretriz_estrategica
+    type: string
+  - name: diretriz_estrategica
+    type: string
+  - name: justificativa_de_inclusao_ou_exclusao_do_programa
+    type: string
+  - name: codigo_do_orgao_responsavel_pelo_programa
+    type: integer
+  - name: orgao_responsavel_pelo_programa
+    type: string
+  - name: codigo_da_unidade_orcamentaria_responsavel_pelo_programa
+    type: integer
+  - name: unidade_orcamentaria_responsavel_pelo_programa
+    type: string
+  - name: objetivo
+    type: string
+  - name: justificativa
+    type: string
+  - name: tipo_de_programa
+    type: string
+  - name: horizonte_temporal
+    type: string
+  - name: estrategia_de_implementacao
+    type: string
+  - name: unidade_administrativa_responsavel_pelo_programa
+    type: string
+  - name: previsao_orcamentaria_2023
+    type: integer
+  - name: previsao_orcamentaria_2024
+    type: integer
+  - name: previsao_orcamentaria_2025
+    type: integer
+  - name: previsao_orcamentaria_2026
+    type: integer
+  - name: programa_transposto
+    type: string
+  - name: causas
+    type: string
+  - name: titulo_do_objetivo_de_desenvolvimento_sustentavel
+    type: string
+  - name: subtitulo_do_objetivo_de_desenvolvimento_sustentavel
+    type: string

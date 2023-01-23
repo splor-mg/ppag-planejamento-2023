@@ -1,0 +1,67 @@
+fields:
+  - name: codigo_do_programa
+    type: integer
+  - name: nome_do_programa
+    type: string
+  - name: codigo_da_area_tematica
+    type: string
+  - name: area_tematica
+    type: string
+  - name: exclusao_logica_do_programa
+    type: boolean
+  - name: codigo_da_acao
+    type: integer
+  - name: titulo_da_acao
+    type: string
+  - name: codigo_do_identificador_de_acao_governamental_iag
+    type: integer
+  - name: identificador_de_acao_governamental_iag
+    type: string
+  - name: codigo_do_projeto_estrategico
+    type: string
+  - name: projeto_estrategico
+    type: string
+  - name: codigo_da_funcao
+    type: integer
+  - name: funcao
+    type: string
+  - name: codigo_da_subfuncao
+    type: integer
+  - name: sub_funcao
+    type: string
+  - name: codigo_da_unidade_orcamentaria_responsavel_pela_acao
+    type: integer
+  - name: unidade_orcamentaria_responsavel_pela_acao
+    type: string
+  - name: exclusao_logica_da_acao
+    type: boolean
+  - name: codigo_do_localizador
+    type: string
+  - name: exclusao_logica_do_localizador
+    type: string
+  - name: codigo_da_regiao_geografica_intermediaria
+    type: integer
+  - name: regiao_geografica_intermediaria
+    type: string
+  - name: codigo_do_municipio_ibge
+    type: integer
+  - name: codigo_do_municipio_sigplan
+    type: integer
+  - name: municipio
+    type: string
+  - name: previsao_orcamentaria_2023
+    type: integer
+  - name: previsao_fisica_2023
+    type: integer
+  - name: previsao_orcamentaria_2024
+    type: integer
+  - name: previsao_fisica_2024
+    type: integer
+  - name: previsao_orcamentaria_2025
+    type: integer
+  - name: previsao_fisica_2025
+    type: integer
+  - name: previsao_orcamentaria_2026
+    type: integer
+  - name: previsao_fisica_2026
+    type: integer

@@ -1,0 +1,97 @@
+fields:
+  - name: codigo_do_program
+    type: integer
+  - name: nome_do_programa
+    type: string
+  - name: codigo_da_area_tematica
+    type: string
+  - name: area_tematica
+    type: string
+  - name: exclusao_logica_do_programa
+    type: string
+  - name: programa_novo
+    type: string
+  - name: justificativa_de_inclusao_ou_exclusao_do_programa
+    type: string
+  - name: codigo_da_unidade_orcamentaria_responsavel_pelo_programa
+    type: integer
+  - name: unidade_orcamentaria_responsavel_pelo_programa
+    type: string
+  - name: codigo_da_unidade_orcamentaria_responsavel_pela_acao
+    type: integer
+  - name: unidade_orcamentaria_responsavel_pela_acao
+    type: string
+  - name: codigo_da_funcao
+    type: integer
+  - name: funcao
+    type: string
+  - name: codigo_da_subfuncao
+    type: integer
+  - name: subfuncao
+    type: string
+  - name: codigo_do_tipo_de_acao
+    type: integer
+  - name: tipo_de_acao
+    type: string
+  - name: codigo_da_acao
+    type: integer
+  - name: titulo_da_acao
+    type: string
+  - name: codigo_do_identificador_de_acao_governamental_iag
+    type: integer
+  - name: identificador_de_acao_governamental_iag
+    type: string
+  - name: codigo_do_projeto_estrategico
+    type: string
+  - name: projeto_estrategico
+    type: string
+  - name: exclusao_logica_da_acao
+    type: string
+  - name: nova_acao
+    type: string
+  - name: justificativa_de_inclusao_ou_exclusao_da_acao
+    type: string
+  - name: transferida_para_o_sisor
+    type: string
+  - name: unidade_administrativa_responsavel_pela_acao
+    type: string
+  - name: base_legal
+    type: string
+  - name: finalidade_da_acao
+    type: string
+  - name: descricao_da_acao
+    type: string
+  - name: codigo_do_publico_alvo
+    type: integer
+  - name: publico_alvo
+    type: string
+  - name: codigo_do_produto
+    type: integer
+  - name: produto
+    type: string
+  - name: especificacao_do_produto
+    type: string
+  - name: codigo_da_unidade_de_medida_do_produto
+    type: integer
+  - name: unidade_de_medida_do_produto
+    type: string
+  - name: previsao_orcamentaria_2023
+    type: integer
+  - name: previsao_orcamentaria_2024
+    type: integer
+  - name: previsao_orcamentaria_2025
+    type: integer
+  - name: previsao_orcamentaria_2026
+    type: integer
+  - name: previsao_fisica_2023
+    type: integer
+  - name: previsao_fisica_2024
+    type: integer
+  - name: previsao_fisica_2025
+    type: integer
+  - name: previsao_fisica_2026
+    type: integer
+  - name: acao_transposta
+    type: string
+  - name: setor_de_governo
+    type: string
