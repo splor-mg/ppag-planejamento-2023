@@ -3,9 +3,10 @@
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
 REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
+REPORTS := $(addsuffix .json,$(addprefix reports/,$(RESOURCES)))
 DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
 
-all: ingest validate-raw transform ## Run the complete data pipeline
+all: ingest validate-raw transform validate ## Run the complete data pipeline
 
 ingest: $(INGEST_FILES) ## Ingest raw files (data/raw/) from staging area (data/staging/)
 
@@ -24,6 +25,12 @@ transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data
 
 $(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json
 	Rscript scripts/transform.R $< $@
+
+validate: $(REPORTS)
+
+$(REPORTS): reports/%.json: data/%.csv schemas/%.yaml
+	frictionless validate --resource-name $* datapackage.yaml > $@
+
 
 clean:
 	find reports/raw -type f -name "*.json" | xargs rm
