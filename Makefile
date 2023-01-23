@@ -3,8 +3,9 @@
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
 REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
+DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
 
-all: ingest validate-raw
+all: ingest validate-raw transform ## Run the complete data pipeline
 
 ingest: $(INGEST_FILES) ## Ingest raw files (data/raw/) from staging area (data/staging/)
 
@@ -19,8 +20,14 @@ validate-raw: $(REPORTS_RAW)
 $(REPORTS_RAW): reports/raw/%.json: data/raw/%.txt schemas/raw/%.yaml
 	frictionless validate --dialect '{"delimiter": "|"}' --format csv --json --schema schemas/raw/$*.yaml data/raw/$*.txt > $@
 
+transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data/
+
+$(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json
+	Rscript scripts/transform.R $< $@
+
 clean:
-	rm -f schemas/raw/* data/raw/* reports/raw/*
+	find reports/raw -type f -name "*.json" | xargs rm
+	find data -type f -name "*.csv" | xargs rm
 
 print: 
 	@echo $(TABLESCHEMA_RAW)
