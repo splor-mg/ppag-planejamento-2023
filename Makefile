@@ -1,4 +1,4 @@
-.PHONY: infer ingest validate-raw all clean print
+.PHONY: infer ingest validate-raw transform validate all clean print
 
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
