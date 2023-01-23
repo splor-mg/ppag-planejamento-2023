@@ -2,7 +2,6 @@
 
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
-TABLESCHEMA_RAW := $(addsuffix .yaml,$(addprefix schemas/raw/,$(RESOURCES)))
 REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
 
 all: ingest validate-raw
@@ -12,10 +11,8 @@ ingest: $(INGEST_FILES) ## Ingest raw files (data/raw/) from staging area (data/
 $(INGEST_FILES): data/raw/%.txt: data/staging/%.txt
 	rsync --itemize-changes --checksum data/staging/* data/raw/
 
-infer: $(TABLESCHEMA_RAW) ingest ## Infer table schema for files in data/raw/ and store under schemas/raw/
-
-$(TABLESCHEMA_RAW): schemas/raw/%.yaml: data/raw/%.txt
-	frictionless describe --dialect '{"delimiter": "|"}'  --format csv --type schema --yaml $< > $@
+infer:  ## Infer table schema for files in data/staging/ and store under schemas/raw/
+	python scripts/infer.py
 
 validate-raw: $(REPORTS_RAW)
 
