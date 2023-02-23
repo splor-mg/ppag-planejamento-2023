@@ -1,5 +1,5 @@
 fields:
-  - name: codigo_do_program
+  - name: codigo_do_programa
     type: integer
   - name: nome_do_programa
     type: string
