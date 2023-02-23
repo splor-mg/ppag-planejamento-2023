@@ -29,7 +29,7 @@ $(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json
 validate: $(REPORTS)
 
 $(REPORTS): reports/%.json: data/%.csv schemas/%.yaml
-	frictionless validate --resource-name $* datapackage.yaml > $@
+	frictionless validate --json --resource-name $* datapackage.yaml > $@
 
 clean:
 	find reports -type f -name "*.json" | xargs rm
