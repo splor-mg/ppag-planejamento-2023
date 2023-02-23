@@ -23,7 +23,7 @@ $(REPORTS_RAW): reports/raw/%.json: data/raw/%.txt schemas/raw/%.yaml
 
 transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data/
 
-$(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json
+$(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json scripts/transform.R
 	Rscript scripts/transform.R $< $@
 
 validate: $(REPORTS)
