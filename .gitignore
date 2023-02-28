@@ -1,2 +1,4 @@
 venv/
 .Rhistory
+.Rproj.user
+build/

@@ -1,4 +1,4 @@
-.PHONY: infer ingest validate-raw transform validate all clean print
+.PHONY: infer ingest validate-raw transform validate build all clean print
 
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
@@ -30,6 +30,11 @@ validate: $(REPORTS)
 
 $(REPORTS): reports/%.json: data/%.csv schemas/%.yaml
 	frictionless validate --json --resource-name $* datapackage.yaml > $@
+
+build: build/ppag2023-dadosmg.zip
+
+build/ppag2023-dadosmg.zip: datapackage.yaml $(DATA_FILES) scripts/build.py
+	python scripts/build.py $< $@
 
 clean:
 	find reports -type f -name "*.json" | xargs rm
