@@ -4,15 +4,63 @@ resources:
     path: data/acoes_planejamento.csv
     format: csv
     schema: schemas/acoes_planejamento.yaml
+    sources:
+      - name: acoes_planejamento
+        title: Relatórios e Bases do Planejamento - Ações
+        path: https://www.sigplan.mg.gov.br/BasesTxt/acoes_planejamento.txt
+        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        staging: data/staging/acoes_planejamento.txt
+        format: csv
+        encoding: windows-1252
+        dialect:
+          csv:
+            delimiter: '|'
+        schema: schemas/raw/acoes_planejamento.yaml
   - name: indicadores_planejamento
     path: data/indicadores_planejamento.csv
     format: csv
     schema: schemas/indicadores_planejamento.yaml
+    sources:
+      - name: indicadores_planejamento
+        title: Relatórios e Bases do Planejamento - Indicadores
+        path: https://www.sigplan.mg.gov.br/BasesTxt/indicadores_planejamento.txt
+        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_indicadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        staging: data/staging/indicadores_planejamento.txt
+        format: csv
+        encoding: windows-1252
+        dialect:
+          csv:
+            delimiter: '|'
+        schema: schemas/raw/indicadores_planejamento.yaml
   - name: localizadores_todos_planejamento
     path: data/localizadores_todos_planejamento.csv
     format: csv
     schema: schemas/localizadores_todos_planejamento.yaml
+    sources:
+      - name: localizadores_todos_planejamento
+        title: Relatórios e Bases do Planejamento - Localizadores (Todos)
+        path: https://www.sigplan.mg.gov.br/BasesTxt/localizadores_Todos_planejamento.txt
+        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        staging: data/staging/localizadores_todos_planejamento.txt
+        format: csv
+        encoding: windows-1252
+        dialect:
+          csv:
+            delimiter: '|'
+        schema: schemas/raw/localizadores_todos_planejamento.yaml
   - name: programas_planejamento
     path: data/programas_planejamento.csv
     format: csv
     schema: schemas/programas_planejamento.yaml
+    sources:
+      - name: programas_planejamento
+        title: Relatórios e Bases do Planejamento - Programas
+        path: https://www.sigplan.mg.gov.br/BasesTxt/programas_planejamento.txt
+        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        format: csv
+        staging: data/staging/programas_planejamento.txt
+        encoding: windows-1252
+        dialect:
+          csv:
+            delimiter: '|'
+        schema: schemas/raw/programas_planejamento.yaml

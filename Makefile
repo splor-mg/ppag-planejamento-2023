@@ -1,12 +1,18 @@
-.PHONY: infer ingest validate-raw transform validate build all clean print
+.PHONY: infer extract ingest validate-raw transform validate build all clean print
 
 RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
+STAGING_LOG_FILES := $(addsuffix .txt,$(addprefix logs/data/staging/,$(RESOURCES)))
 INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
 REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
 REPORTS := $(addsuffix .json,$(addprefix reports/,$(RESOURCES)))
 DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
 
-all: ingest validate-raw transform validate ## Run the complete data pipeline
+all: extract ingest validate-raw transform validate ## Run the complete data pipeline
+
+extract: $(STAGING_LOG_FILES) ## Extract raw files from source system over network and stores locally in staging area (data/staging/)
+
+$(STAGING_LOG_FILES): logs/data/staging/%.txt: data/staging/%.txt
+	python scripts/extract.py $* 2>&1 | tee $@
 
 ingest: $(INGEST_FILES) ## Ingest raw files (data/raw/) from staging area (data/staging/)
 
