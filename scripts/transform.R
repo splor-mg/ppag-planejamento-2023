@@ -3,7 +3,7 @@ transform <- function(input, output) {
                                 delim = "|", 
                                 locale = readr::locale(encoding = "windows-1252"))
     result <- janitor::clean_names(result)
-    readr::write_excel_csv2(result, output, quote = "needed", na = "")
+    readr::write_csv(result, output, quote = "needed", na = "")
 }
 
 main <- function(args) {
