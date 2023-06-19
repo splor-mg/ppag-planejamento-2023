@@ -29,8 +29,8 @@ $(REPORTS_RAW): reports/raw/%.json: data/raw/%.txt schemas/raw/%.yaml
 
 transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data/
 
-$(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json scripts/transform.R
-	Rscript scripts/transform.R $< $@
+$(DATA_FILES): data/%.csv: data/raw/%.txt reports/raw/%.json schemas/%.yaml scripts/transform.py datapackage.yaml
+	python scripts/transform.py $*
 
 validate: $(REPORTS)
 

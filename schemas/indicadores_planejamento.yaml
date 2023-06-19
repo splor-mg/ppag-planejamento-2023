@@ -1,53 +1,79 @@
 fields:
   - name: codigo_do_programa
+    title: Código do Programa
     type: integer
   - name: nome_do_programa
+    title: Nome do Programa
     type: string
   - name: exclusao_logica_do_programa
+    title: Exclusão Lógica do Programa
     type: boolean
   - name: indicador
+    title: Indicador
     type: string
   - name: exclusao_logica_do_indicador
+    title: Exclusão Lógica do Indicador
     type: boolean
   - name: unidade_de_medida
+    title: Unidade de Medida
     type: string
   - name: indice_de_referencia
+    title: Índice de Referência
     type: string
   - name: em_apuracao_indice_de_referencia
+    title: Em apuração? (Índice de Referência)
     type: string
   - name: data_de_apuracao
+    title: Data de Apuração
     type: string
   - name: previsao_para_2023
+    title: Previsão para 2023
     type: string
   - name: em_apuracao_2023
+    title: Em apuração? (2023)
     type: string
   - name: previsao_para_2024
+    title: Previsão para 2024
     type: string
   - name: em_apuracao_2024
+    title: Em apuração? (2024)
     type: string
   - name: previsao_para_2025
+    title: Previsão para 2025
     type: string
   - name: em_apuracao_2025
+    title: Em apuração? (2025)
     type: string
   - name: previsao_para_2026
+    title: Previsão para 2026
     type: string
   - name: em_apuracao_2026
+    title: Em apuração? (2026)
     type: string
   - name: fonte
+    title: Fonte
     type: string
   - name: periodicidade
+    title: Periodicidade
     type: string
   - name: base_geografica
+    title: Base Geográfica
     type: string
   - name: formula_de_calculo
+    title: Fórmula de Cálculo
     type: string
   - name: justificativa_do_status_em_apuracao_da_s_previsao_es_do_s_indice_s
+    title: Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)
     type: string
   - name: justificativa_do_status_em_apuracao_do_indice_de_referencia
+    title: Justificativa do Status em apuração do Índice de Referência
     type: string
   - name: data_alteracao
+    title: Data Alteração
     type: string
   - name: indicador_novo
+    title: Indicador Novo?
     type: boolean
   - name: polaridade
+    title: Polaridade
     type: string

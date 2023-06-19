@@ -10,6 +10,7 @@ resources:
         path: https://www.sigplan.mg.gov.br/BasesTxt/acoes_planejamento.txt
         link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
         staging: data/staging/acoes_planejamento.txt
+        raw: data/raw/acoes_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -26,6 +27,7 @@ resources:
         path: https://www.sigplan.mg.gov.br/BasesTxt/indicadores_planejamento.txt
         link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_indicadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
         staging: data/staging/indicadores_planejamento.txt
+        raw: data/raw/indicadores_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -42,6 +44,7 @@ resources:
         path: https://www.sigplan.mg.gov.br/BasesTxt/localizadores_Todos_planejamento.txt
         link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
         staging: data/staging/localizadores_todos_planejamento.txt
+        raw: data/raw/localizadores_todos_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -59,6 +62,7 @@ resources:
         link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
         format: csv
         staging: data/staging/programas_planejamento.txt
+        raw: data/raw/programas_planejamento.txt
         encoding: windows-1252
         dialect:
           csv:

@@ -1,67 +1,100 @@
 fields:
   - name: codigo_do_programa
+    title: Código do Programa
     type: integer
   - name: nome_do_programa
+    title: Nome do Programa
     type: string
   - name: codigo_da_area_tematica
+    title: Código da Área Temática
     type: string
   - name: area_tematica
+    title: Área Temática
     type: string
   - name: exclusao_logica_do_programa
+    title: Exclusão Lógica do Programa
     type: boolean
   - name: codigo_da_acao
+    title: Código da Ação
     type: integer
   - name: titulo_da_acao
+    title: Título da Ação
     type: string
   - name: codigo_do_identificador_de_acao_governamental_iag
+    title: Código do Identificador de Ação Governamental (IAG)
     type: integer
   - name: identificador_de_acao_governamental_iag
+    title: Identificador de Ação Governamental (IAG)
     type: string
   - name: codigo_do_projeto_estrategico
+    title: Código do Projeto Estratégico
     type: string
   - name: projeto_estrategico
+    title: Projeto Estratégico
     type: string
   - name: codigo_da_funcao
+    title: Código da Função
     type: integer
   - name: funcao
+    title: Função
     type: string
   - name: codigo_da_subfuncao
+    title: Código da Subfunção
     type: integer
   - name: sub_funcao
+    title: SubFunção
     type: string
   - name: codigo_da_unidade_orcamentaria_responsavel_pela_acao
+    title: Código da Unidade Orçamentária Responsável pela Ação
     type: integer
   - name: unidade_orcamentaria_responsavel_pela_acao
+    title: Unidade Orçamentária Responsável pela Ação
     type: string
   - name: exclusao_logica_da_acao
+    title: Exclusão Lógica da Ação
     type: boolean
   - name: codigo_do_localizador
+    title: Código do Localizador
     type: string
   - name: exclusao_logica_do_localizador
+    title: Exclusão Lógica do Localizador
     type: string
   - name: codigo_da_regiao_geografica_intermediaria
+    title: Código da Região Geográfica Intermediária
     type: integer
   - name: regiao_geografica_intermediaria
+    title: Região Geográfica Intermediária
     type: string
   - name: codigo_do_municipio_ibge
+    title: Código do Município IBGE
     type: integer
   - name: codigo_do_municipio_sigplan
+    title: Código do Município Sigplan
     type: integer
   - name: municipio
+    title: Município
     type: string
   - name: previsao_orcamentaria_2023
+    title: Previsão Orçamentária 2023
     type: integer
   - name: previsao_fisica_2023
+    title: Previsão Física 2023
     type: integer
   - name: previsao_orcamentaria_2024
+    title: Previsão Orçamentária 2024
     type: integer
   - name: previsao_fisica_2024
+    title: Previsão Física 2024
     type: integer
   - name: previsao_orcamentaria_2025
+    title: Previsão Orçamentária 2025
     type: integer
   - name: previsao_fisica_2025
+    title: Previsão Física 2025
     type: integer
   - name: previsao_orcamentaria_2026
+    title: Previsão Orçamentária 2026
     type: integer
   - name: previsao_fisica_2026
+    title: Previsão Física 2026
     type: integer
