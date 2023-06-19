@@ -22,6 +22,7 @@ def extract(resource_name, descriptor):
     res = requests.get(resource.sources[0]['api_url']) # Resource is stripping url property
     res.raise_for_status()
     if 'gerado com sucesso!' not in res.text:
+        logger.error('Erro na geração do arquivo texto')
         raise Exception
     
     soup = BeautifulSoup(res.text, 'html.parser')

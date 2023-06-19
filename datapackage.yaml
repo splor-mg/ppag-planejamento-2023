@@ -40,7 +40,7 @@ resources:
       - name: localizadores_todos_planejamento
         title: Relatórios e Bases do Planejamento - Localizadores (Todos)
         path: data/raw/localizadores_todos_planejamento.txt
-        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&tipo_rel=5&periodo=undefined
         download_url: https://www.sigplan.mg.gov.br/BasesTxt/localizadores_Todos_planejamento.txt
         format: csv
         encoding: windows-1252
@@ -58,6 +58,7 @@ resources:
         path: data/raw/programas_planejamento.txt
         api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
         download_url: https://www.sigplan.mg.gov.br/BasesTxt/programas_planejamento.txt
+        format: csv
         encoding: windows-1252
         dialect:
           csv:
