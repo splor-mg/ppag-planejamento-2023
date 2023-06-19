@@ -9,11 +9,7 @@ def transform(resource_name, descriptor):
     package = Package(descriptor)
     resource = package.get_resource(resource_name)
     logger.info(f'Transforming resource {resource.name}')
-    source = Resource(path=resource.sources[0]['raw'],
-                      format=resource.sources[0]['format'],
-                      encoding=resource.sources[0]['encoding'],
-                      dialect=Dialect(resource.sources[0]['dialect']),
-                      schema=resource.sources[0]['schema'])
+    source = Resource(resource.sources[0])
     table = source.to_petl()
     field_names = {field.title: field.name for field in resource.schema.fields}
     table = etl.rename(table, field_names)
