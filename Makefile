@@ -1,25 +1,19 @@
-.PHONY: infer extract ingest validate-raw transform validate build all clean print
+.PHONY: infer extract validate-raw transform validate build all clean print
 
-RESOURCES := $(basename $(notdir $(wildcard data/staging/*.txt)))
-STAGING_LOG_FILES := $(addsuffix .txt,$(addprefix logs/data/staging/,$(RESOURCES)))
-INGEST_FILES := $(addsuffix .txt,$(addprefix data/raw/,$(RESOURCES)))
+RESOURCES := $(shell yq e '.resources[].name' datapackage.yaml)
+EXTRACT_LOG_FILES := $(addsuffix .txt,$(addprefix logs/data/raw/,$(RESOURCES)))
 REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
 REPORTS := $(addsuffix .json,$(addprefix reports/,$(RESOURCES)))
 DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
 
 all: extract ingest validate-raw transform validate ## Run the complete data pipeline
 
-extract: $(STAGING_LOG_FILES) ## Extract raw files from source system over network and stores locally in staging area (data/staging/)
+extract: $(EXTRACT_LOG_FILES) ## Extract raw files from source system over network and stores locally in data/raw/
 
-$(STAGING_LOG_FILES): logs/data/staging/%.txt: data/staging/%.txt
+$(EXTRACT_LOG_FILES): logs/data/raw/%.txt:
 	python scripts/extract.py $* 2>&1 | tee $@
 
-ingest: $(INGEST_FILES) ## Ingest raw files (data/raw/) from staging area (data/staging/)
-
-$(INGEST_FILES): data/raw/%.txt: data/staging/%.txt
-	rsync --itemize-changes --checksum data/staging/* data/raw/
-
-infer:  ## Infer table schema for files in data/staging/ and store under schemas/raw/
+infer:  ## Infer table schema for files in data/raw/ and store under schemas/raw/
 	python scripts/infer.py
 
 validate-raw: $(REPORTS_RAW)

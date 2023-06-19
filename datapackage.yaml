@@ -7,10 +7,9 @@ resources:
     sources:
       - name: acoes_planejamento
         title: Relatórios e Bases do Planejamento - Ações
-        path: https://www.sigplan.mg.gov.br/BasesTxt/acoes_planejamento.txt
-        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
-        staging: data/staging/acoes_planejamento.txt
-        raw: data/raw/acoes_planejamento.txt
+        path: data/raw/acoes_planejamento.txt
+        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        download_url: https://www.sigplan.mg.gov.br/BasesTxt/acoes_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -24,10 +23,9 @@ resources:
     sources:
       - name: indicadores_planejamento
         title: Relatórios e Bases do Planejamento - Indicadores
-        path: https://www.sigplan.mg.gov.br/BasesTxt/indicadores_planejamento.txt
-        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_indicadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
-        staging: data/staging/indicadores_planejamento.txt
-        raw: data/raw/indicadores_planejamento.txt
+        path: data/raw/indicadores_planejamento.txt
+        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_indicadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        download_url: https://www.sigplan.mg.gov.br/BasesTxt/indicadores_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -41,10 +39,9 @@ resources:
     sources:
       - name: localizadores_todos_planejamento
         title: Relatórios e Bases do Planejamento - Localizadores (Todos)
-        path: https://www.sigplan.mg.gov.br/BasesTxt/localizadores_Todos_planejamento.txt
-        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
-        staging: data/staging/localizadores_todos_planejamento.txt
-        raw: data/raw/localizadores_todos_planejamento.txt
+        path: data/raw/localizadores_todos_planejamento.txt
+        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_localizadores_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        download_url: https://www.sigplan.mg.gov.br/BasesTxt/localizadores_Todos_planejamento.txt
         format: csv
         encoding: windows-1252
         dialect:
@@ -58,11 +55,9 @@ resources:
     sources:
       - name: programas_planejamento
         title: Relatórios e Bases do Planejamento - Programas
-        path: https://www.sigplan.mg.gov.br/BasesTxt/programas_planejamento.txt
-        link: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
-        format: csv
-        staging: data/staging/programas_planejamento.txt
-        raw: data/raw/programas_planejamento.txt
+        path: data/raw/programas_planejamento.txt
+        api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+        download_url: https://www.sigplan.mg.gov.br/BasesTxt/programas_planejamento.txt
         encoding: windows-1252
         dialect:
           csv:
