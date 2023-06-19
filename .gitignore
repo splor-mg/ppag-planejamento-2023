@@ -2,3 +2,6 @@ venv/
 .Rhistory
 .Rproj.user
 build/
+data/
+reports/
+logs/
