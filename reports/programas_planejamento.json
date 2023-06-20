@@ -1,0 +1,62 @@
+{
+  "valid": true,
+  "stats": {
+    "tasks": 1,
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 0.189
+  },
+  "warnings": [],
+  "errors": [],
+  "tasks": [
+    {
+      "name": "programas_planejamento",
+      "type": "table",
+      "valid": true,
+      "place": "data/programas_planejamento.csv",
+      "labels": [
+        "programa_cod",
+        "programa_desc",
+        "is_deleted_programa",
+        "is_new_programa",
+        "area_tematica_cod",
+        "area_tematica_desc",
+        "objetivo_estrategico_cod",
+        "objetivo_estrategico_desc",
+        "diretriz_estrategica_cod",
+        "diretriz_estrategica_desc",
+        "justificativa_is_new_programa",
+        "orgao_programa_cod",
+        "orgao_programa_nome",
+        "uo_programa_cod",
+        "uo_programa_nome",
+        "objetivo",
+        "justificativa",
+        "tipo_de_programa",
+        "horizonte_temporal",
+        "estrategia_de_implementacao",
+        "ua_programa_nome",
+        "vr_meta_orcamentaria_2023",
+        "vr_meta_orcamentaria_2024",
+        "vr_meta_orcamentaria_2025",
+        "vr_meta_orcamentaria_2026",
+        "is_programa_transposto",
+        "causas",
+        "ods_titulo",
+        "ods_subtitulo"
+      ],
+      "stats": {
+        "errors": 0,
+        "warnings": 0,
+        "seconds": 0.185,
+        "md5": "cfd1a17f7541b7cad08e44e57e5f42da",
+        "sha256": "b312759ee97f6acaf6db46286030c4f384841b6d382614002bf4563966cd3236",
+        "bytes": 6646358,
+        "fields": 29,
+        "rows": 2515
+      },
+      "warnings": [],
+      "errors": []
+    }
+  ]
+}

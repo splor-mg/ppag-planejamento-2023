@@ -1,0 +1,59 @@
+{
+  "valid": true,
+  "stats": {
+    "tasks": 1,
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 0.168
+  },
+  "warnings": [],
+  "errors": [],
+  "tasks": [
+    {
+      "name": "indicadores_planejamento",
+      "type": "table",
+      "valid": true,
+      "place": "data/indicadores_planejamento.csv",
+      "labels": [
+        "programa_cod",
+        "programa_nome",
+        "is_deleted_programa",
+        "indicador",
+        "is_deleted_indicador",
+        "unidade_de_medida",
+        "indice_de_referencia",
+        "em_apuracao_indice_de_referencia",
+        "dt_apuracao",
+        "previsao_para_2023",
+        "em_apuracao_2023",
+        "previsao_para_2024",
+        "em_apuracao_2024",
+        "previsao_para_2025",
+        "em_apuracao_2025",
+        "previsao_para_2026",
+        "em_apuracao_2026",
+        "fonte",
+        "periodicidade",
+        "base_geografica",
+        "formula_de_calculo",
+        "justificativa_status_apuracao_previsoes",
+        "justificativa_status_apuracao_indice_ref",
+        "updated_at",
+        "is_indicador_new",
+        "polaridade"
+      ],
+      "stats": {
+        "errors": 0,
+        "warnings": 0,
+        "seconds": 0.164,
+        "md5": "8e8accfaf8317565022fdd5dc6c700fd",
+        "sha256": "7d0f1820211e7b83e992e251ecf0469c7eab9255ffc38e5d79853c90060f55ad",
+        "bytes": 110780,
+        "fields": 26,
+        "rows": 251
+      },
+      "warnings": [],
+      "errors": []
+    }
+  ]
+}
