@@ -6,7 +6,7 @@ REPORTS_RAW := $(addsuffix .json,$(addprefix reports/raw/,$(RESOURCES)))
 REPORTS := $(addsuffix .json,$(addprefix reports/,$(RESOURCES)))
 DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
 
-all: extract ingest validate-raw transform validate ## Run the complete data pipeline
+all: extract validate-raw transform validate ## Run the complete data pipeline
 
 extract: $(EXTRACT_LOG_FILES) ## Extract raw files from source system over network and stores locally in data/raw/
 
@@ -39,6 +39,7 @@ build/ppag2023-dadosmg.zip: datapackage.yaml $(DATA_FILES) scripts/build.py
 clean:
 	find reports -type f -name "*.json" | xargs rm
 	find data -type f -name "*.csv" | xargs rm
+	find logs -type f -name "*.txt" | xargs rm
 
 print: 
 	@echo $(TABLESCHEMA_RAW)
