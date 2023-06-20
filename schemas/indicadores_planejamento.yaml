@@ -1,17 +1,17 @@
 fields:
-  - name: codigo_do_programa
+  - name: programa_cod
     title: Código do Programa
     type: integer
-  - name: nome_do_programa
+  - name: programa_nome
     title: Nome do Programa
     type: string
-  - name: exclusao_logica_do_programa
+  - name: is_deleted_programa
     title: Exclusão Lógica do Programa
     type: boolean
   - name: indicador
     title: Indicador
     type: string
-  - name: exclusao_logica_do_indicador
+  - name: is_deleted_indicador
     title: Exclusão Lógica do Indicador
     type: boolean
   - name: unidade_de_medida
@@ -23,9 +23,10 @@ fields:
   - name: em_apuracao_indice_de_referencia
     title: Em apuração? (Índice de Referência)
     type: string
-  - name: data_de_apuracao
+  - name: dt_apuracao
     title: Data de Apuração
-    type: string
+    type: date
+    format: '%d/%m/%Y'
   - name: previsao_para_2023
     title: Previsão para 2023
     type: string
@@ -62,18 +63,31 @@ fields:
   - name: formula_de_calculo
     title: Fórmula de Cálculo
     type: string
-  - name: justificativa_do_status_em_apuracao_da_s_previsao_es_do_s_indice_s
+  - name: justificativa_status_apuracao_previsoes
     title: Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)
     type: string
-  - name: justificativa_do_status_em_apuracao_do_indice_de_referencia
+  - name: justificativa_status_apuracao_indice_ref
     title: Justificativa do Status em apuração do Índice de Referência
     type: string
-  - name: data_alteracao
+  - name: updated_at
     title: Data Alteração
-    type: string
-  - name: indicador_novo
+    type: datetime
+    format: '%d/%m/%Y %H:%M:%S'
+  - name: is_indicador_new
     title: Indicador Novo?
     type: boolean
   - name: polaridade
     title: Polaridade
     type: string
+primaryKey:
+  - programa_cod
+  - is_deleted_programa
+  - indicador
+  - is_deleted_indicador
+foreignKeys:
+  - fields:
+      - programa_cod
+    reference:
+      fields:
+        - programa_cod
+      resource: programas_planejamento

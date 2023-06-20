@@ -5,141 +5,170 @@ fields:
   - name: programa_desc
     title: Nome do Programa
     type: string
-  - name: codigo_da_area_tematica
+  - name: area_tematica_cod
     title: Código da Área Temática
     type: string
-  - name: area_tematica
+  - name: area_tematica_desc
     title: Área Temática
     type: string
-  - name: exclusao_logica_do_programa
+  - name: is_deleted_programa
     title: Exclusão Lógica do Programa
-    type: string
-  - name: programa_novo
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: is_new_programa
     title: Programa Novo
-    type: string
-  - name: justificativa_de_inclusao_ou_exclusao_do_programa
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: justificativa_is_new_programa
     title: Justificativa de Inclusão ou Exclusão do Programa
     type: string
   - name: uo_programa_cod
     title: Código da Unidade Orçamentária Responsável pelo Programa
     type: integer
-  - name: uo_programa_desc
+  - name: uo_programa_nome
     title: Unidade Orçamentária Responsável pelo Programa
     type: string
-  - name: codigo_da_unidade_orcamentaria_responsavel_pela_acao
+  - name: uo_acao_cod
     title: Código da Unidade Orçamentária Responsável pela Ação
     type: integer
-  - name: unidade_orcamentaria_responsavel_pela_acao
+  - name: uo_acao_nome
     title: Unidade Orçamentária Responsável pela Ação
     type: string
-  - name: codigo_da_funcao
+  - name: funcao_cod
     title: Código da Função
     type: integer
-  - name: funcao
+  - name: funcao_desc
     title: Função
     type: string
-  - name: codigo_da_subfuncao
+  - name: subfuncao_cod
     title: Código da Subfunção
     type: integer
-  - name: subfuncao
+  - name: subfuncao_desc
     title: Subfunção
     type: string
-  - name: codigo_do_tipo_de_acao
+  - name: identificador_tipo_acao_cod
     title: Código do Tipo de Ação
     type: integer
-  - name: tipo_de_acao
+  - name: identificador_tipo_acao_desc
     title: Tipo de Ação
     type: string
-  - name: codigo_da_acao
+  - name: acao_cod
     title: Código da Ação
     type: integer
-  - name: titulo_da_acao
+  - name: acao_desc
     title: Título da Ação
     type: string
-  - name: codigo_do_identificador_de_acao_governamental_iag
+  - name: iag_cod
     title: Código do Identificador de Ação Governamental (IAG)
     type: integer
-  - name: identificador_de_acao_governamental_iag
+  - name: iag_desc
     title: Identificador de Ação Governamental (IAG)
     type: string
-  - name: codigo_do_projeto_estrategico
+  - name: projeto_estrategico_cod
     title: Código do Projeto Estratégico
     type: string
   - name: projeto_estrategico
     title: Projeto Estratégico
     type: string
-  - name: exclusao_logica_da_acao
+  - name: is_deleted_acao
     title: Exclusão Lógica da Ação
-    type: string
-  - name: nova_acao
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: is_new_acao
     title: Nova Ação
-    type: string
-  - name: justificativa_de_inclusao_ou_exclusao_da_acao
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: justificativa_is_new_acao
     title: Justificativa de Inclusão ou Exclusão da Ação
     type: string
-  - name: transferida_para_o_sisor
+  - name: is_transferida_sisor
     title: Transferida para o SISOR
-    type: string
-  - name: unidade_administrativa_responsavel_pela_acao
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: ua_acao_nome
     title: Unidade Administrativa Responsável pela Ação
     type: string
   - name: base_legal
     title: Base legal
     type: string
-  - name: finalidade_da_acao
+  - name: acao_finalidade
     title: Finalidade da Ação
     type: string
-  - name: descricao_da_acao
+  - name: acao_descricao
     title: Descrição da Ação
     type: string
-  - name: codigo_do_publico_alvo
+  - name: publico_alvo_cod
     title: Código do Público-alvo
     type: integer
-  - name: publico_alvo
+  - name: publico_alvo_desc
     title: Público-Alvo
     type: string
-  - name: codigo_do_produto
+  - name: produto_cod
     title: Código do Produto
     type: integer
-  - name: produto
+  - name: produto_desc
     title: Produto
     type: string
-  - name: especificacao_do_produto
+  - name: produto_especificacao
     title: Especificação do Produto
     type: string
-  - name: codigo_da_unidade_de_medida_do_produto
+  - name: produto_unidade_medida_cod
     title: Código da Unidade de Medida do Produto
     type: integer
-  - name: unidade_de_medida_do_produto
+  - name: produto_unidade_medida_desc
     title: Unidade de Medida do Produto
     type: string
-  - name: previsao_orcamentaria_2023
+  - name: vr_meta_orcamentaria_2023
     title: Previsão Orçamentária 2023
     type: integer
-  - name: previsao_orcamentaria_2024
+  - name: vr_meta_orcamentaria_2024
     title: Previsão Orçamentária 2024
     type: integer
-  - name: previsao_orcamentaria_2025
+  - name: vr_meta_orcamentaria_2025
     title: Previsão Orçamentária 2025
     type: integer
-  - name: previsao_orcamentaria_2026
+  - name: vr_meta_orcamentaria_2026
     title: Previsão Orçamentária 2026
     type: integer
-  - name: previsao_fisica_2023
+  - name: vr_meta_fisica_2023
     title: Previsão Física 2023
     type: integer
-  - name: previsao_fisica_2024
+  - name: vr_meta_fisica_2024
     title: Previsão Física 2024
     type: integer
-  - name: previsao_fisica_2025
+  - name: vr_meta_fisica_2025
     title: Previsão Física 2025
     type: integer
-  - name: previsao_fisica_2026
+  - name: vr_meta_fisica_2026
     title: Previsão Física 2026
     type: integer
-  - name: acao_transposta
+  - name: is_acao_transposta
     title: Ação Transposta
-    type: string
-  - name: setor_de_governo
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: setor_governo
     title: Setor de Governo
     type: string
+primaryKey:
+  - uo_acao_cod
+  - acao_cod
+  - is_deleted_acao
+foreignKeys:
+  - fields:
+      - uo_programa_cod
+    reference:
+      fields:
+        - uo_programa_cod
+      resource: programas_planejamento
+  - fields:
+      - programa_cod
+    reference:
+      fields:
+        - programa_cod
+      resource: programas_planejamento

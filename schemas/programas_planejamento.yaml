@@ -5,43 +5,47 @@ fields:
   - name: programa_desc
     title: Nome do Programa
     type: string
-  - name: exclusao_logica_do_programa
+  - name: is_deleted_programa
     title: Exclusão Lógica do Programa
-    type: string
-  - name: programa_novo
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: is_new_programa
     title: Programa Novo
-    type: string
-  - name: codigo_da_area_tematica
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
+  - name: area_tematica_cod
     title: Código da Área Temática
     type: string
-  - name: area_tematica
+  - name: area_tematica_desc
     title: Área Temática
     type: string
-  - name: codigo_do_objetivo_estrategico
+  - name: objetivo_estrategico_cod
     title: Código do Objetivo Estratégico
     type: integer
-  - name: objetivo_estrategico
+  - name: objetivo_estrategico_desc
     title: Objetivo Estratégico
     type: string
-  - name: codigo_da_diretriz_estrategica
+  - name: diretriz_estrategica_cod
     title: Código da Diretriz Estratégica
     type: string
-  - name: diretriz_estrategica
+  - name: diretriz_estrategica_desc
     title: Diretriz Estratégica
     type: string
-  - name: justificativa_de_inclusao_ou_exclusao_do_programa
+  - name: justificativa_is_new_programa
     title: Justificativa de Inclusão ou Exclusão do Programa
     type: string
-  - name: codigo_do_orgao_responsavel_pelo_programa
+  - name: orgao_programa_cod
     title: Código do Órgão Responsável pelo Programa
     type: integer
-  - name: orgao_responsavel_pelo_programa
+  - name: orgao_programa_nome
     title: Órgão Responsável pelo Programa
     type: string
-  - name: codigo_da_unidade_orcamentaria_responsavel_pelo_programa
+  - name: uo_programa_cod
     title: Código da Unidade Orçamentária Responsável pelo Programa
     type: integer
-  - name: unidade_orcamentaria_responsavel_pelo_programa
+  - name: uo_programa_nome
     title: Unidade Orçamentária Responsável pelo Programa
     type: string
   - name: objetivo
@@ -59,30 +63,39 @@ fields:
   - name: estrategia_de_implementacao
     title: Estratégia de Implementação
     type: string
-  - name: unidade_administrativa_responsavel_pelo_programa
+  - name: ua_programa_nome
     title: Unidade Administrativa Responsável pelo Programa
     type: string
-  - name: previsao_orcamentaria_2023
+  - name: vr_meta_orcamentaria_2023
     title: Previsão Orçamentária 2023
     type: integer
-  - name: previsao_orcamentaria_2024
+  - name: vr_meta_orcamentaria_2024
     title: Previsão Orçamentária 2024
     type: integer
-  - name: previsao_orcamentaria_2025
+  - name: vr_meta_orcamentaria_2025
     title: Previsão Orçamentária 2025
     type: integer
-  - name: previsao_orcamentaria_2026
+  - name: vr_meta_orcamentaria_2026
     title: Previsão Orçamentária 2026
     type: integer
-  - name: programa_transposto
+  - name: is_programa_transposto
     title: Programa Transposto
-    type: string
+    type: boolean
+    trueValues: ['Sim']
+    falseValues: ['Não']
   - name: causas
     title: Causas
     type: string
-  - name: titulo_do_objetivo_de_desenvolvimento_sustentavel
+  - name: ods_titulo
     title: Título do Objetivo de Desenvolvimento Sustentável
     type: string
-  - name: subtitulo_do_objetivo_de_desenvolvimento_sustentavel
+  - name: ods_subtitulo
     title: Subtítulo do Objetivo de Desenvolvimento Sustentável
     type: string
+primaryKey:
+  - uo_programa_cod
+  - programa_cod
+  - is_deleted_programa
+  - objetivo_estrategico_cod
+  - diretriz_estrategica_cod
+  - ods_titulo
