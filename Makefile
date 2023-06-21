@@ -19,6 +19,11 @@ transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data
 $(DATA_FILES): data/%.csv: data/raw/%.txt schemas/%.yaml scripts/transform.py datapackage.yaml
 	python scripts/transform.py $*
 
+check: checks-python
+
+checks-python:
+	python -m pytest checks/python/
+
 clean:
 	find data -type f -name "*.csv" | xargs rm
 	find logs -type f -name "*.txt" | xargs rm
