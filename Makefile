@@ -20,6 +20,5 @@ checks-python:
 
 publish: 
 	git add -Af data/*.csv
-	timestamp=$(date -u)
-	git commit -m "Update data package: ${timestamp}" || exit 0
+	git commit -m "Update data package" || exit 0
 	git push
