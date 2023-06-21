@@ -1,17 +1,14 @@
-.PHONY: all extract transform
+.PHONY: all extract transform check
 
-RESOURCES := $(shell yq e '.resources[].name' datapackage.yaml)
-EXTRACT_LOG_FILES := $(addsuffix .txt,$(addprefix logs/data/raw/,$(RESOURCES)))
-DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCES)))
+RESOURCE_NAMES := $(shell yq e '.resources[].name' datapackage.yaml)
+DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCE_NAMES)))
 
-all: extract transform ## Run the complete data pipeline
+all: extract transform check
 
-extract: $(EXTRACT_LOG_FILES) ## Extract raw files from source system over network and stores locally in data/raw/
+extract: 
+	$(foreach resource_name, $(RESOURCE_NAMES), python scripts/extract.py $(resource_name);)
 
-$(EXTRACT_LOG_FILES): logs/data/raw/%.txt:
-	python scripts/extract.py $* 2>&1 | tee $@
-
-transform: $(DATA_FILES) ## Transform raw data from data/raw and save under data/
+transform: $(DATA_FILES)
 
 $(DATA_FILES): data/%.csv: data/raw/%.txt schemas/%.yaml scripts/transform.py datapackage.yaml
 	python scripts/transform.py $*
