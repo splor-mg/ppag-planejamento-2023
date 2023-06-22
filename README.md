@@ -1,7 +1,7 @@
 # PPAG Planejamento
 
-[![Updated](https://github.com/splor-mg/ppag-planejamento-2023/workflows/check/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
-[![Valid](https://github.com/splor-mg/ppag-planejamento-2023/workflows/check/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
+[![Updated](https://github.com/splor-mg/ppag-planejamento-2023/actions/workflows/all.yaml/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
+[![Valid](https://github.com/splor-mg/ppag-planejamento-2023/actions/workflows/check.yaml/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
 
 ## Pré-requisitos
 

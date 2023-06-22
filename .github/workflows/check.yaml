@@ -1,4 +1,4 @@
-name: Check data package
+name: Valid
 
 on:
   workflow_dispatch:
