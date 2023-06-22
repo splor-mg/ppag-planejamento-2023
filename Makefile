@@ -3,7 +3,7 @@
 RESOURCE_NAMES := $(shell yq e '.resources[].name' datapackage.yaml)
 DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCE_NAMES)))
 
-all: extract transform check
+all: extract transform check publish
 
 extract: 
 	$(foreach resource_name, $(RESOURCE_NAMES), python scripts/extract.py $(resource_name);)
@@ -20,5 +20,5 @@ checks-python:
 
 publish: 
 	git add -Af data/*.csv
-	git commit -m "Update data package" || exit 0
+	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package" || exit 0
 	git push
