@@ -1,5 +1,8 @@
 # PPAG Planejamento
 
+[![Updated](https://github.com/splor-mg/ppag-planejamento-2023/workflows/check/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
+[![Valid](https://github.com/splor-mg/ppag-planejamento-2023/workflows/check/badge.svg)](https://github.com/splor-mg/ppag-planejamento-2023/actions/)
+
 ## Pré-requisitos
 
 Esse projeto utiliza Docker para gerenciamento das dependências. Para fazer _build_  da imagem execute:
