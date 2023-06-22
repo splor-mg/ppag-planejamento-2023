@@ -13,7 +13,7 @@ def transform(resource_name, descriptor):
     table = source.to_petl()
     field_names = {field.title: field.name for field in resource.schema.fields}
     table = etl.rename(table, field_names)
-    etl.tocsv(table, resource.path)
+    etl.tocsv(table, resource.path, encoding='utf-8')
 
 def main(resource_name: str, descriptor: str = 'datapackage.yaml'):
     transform(resource_name, descriptor)
