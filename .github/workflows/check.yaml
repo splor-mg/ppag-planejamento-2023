@@ -1,0 +1,18 @@
+name: Check data package
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/*'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+    - name: Build docker image
+      run: docker build --tag ppag-planejamento .
+    - name: Run pipeline
+      run: docker run --rm --mount type=bind,source=${PWD},target=/project ppag-planejamento make check
