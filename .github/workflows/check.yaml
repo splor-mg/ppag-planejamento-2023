@@ -1,4 +1,4 @@
-name: Valid
+name: Checks
 
 on:
   workflow_dispatch:
