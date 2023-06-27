@@ -27,28 +27,28 @@ fields:
     title: Data de Apuração
     type: date
     format: '%d/%m/%Y'
-  - name: previsao_para_2023
+  - name: previsao_para_ano0
     title: Previsão para 2023
     type: string
-  - name: em_apuracao_2023
+  - name: em_apuracao_ano0
     title: Em apuração? (2023)
     type: string
-  - name: previsao_para_2024
+  - name: previsao_para_ano1
     title: Previsão para 2024
     type: string
-  - name: em_apuracao_2024
+  - name: em_apuracao_ano1
     title: Em apuração? (2024)
     type: string
-  - name: previsao_para_2025
+  - name: previsao_para_ano2
     title: Previsão para 2025
     type: string
-  - name: em_apuracao_2025
+  - name: em_apuracao_ano2
     title: Em apuração? (2025)
     type: string
-  - name: previsao_para_2026
+  - name: previsao_para_ano3
     title: Previsão para 2026
     type: string
-  - name: em_apuracao_2026
+  - name: em_apuracao_ano3
     title: Em apuração? (2026)
     type: string
   - name: fonte
