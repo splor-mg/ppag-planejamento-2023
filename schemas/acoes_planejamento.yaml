@@ -123,28 +123,28 @@ fields:
   - name: produto_unidade_medida_desc
     title: Unidade de Medida do Produto
     type: string
-  - name: vr_meta_orcamentaria_2023
+  - name: vr_meta_orcamentaria_ano0
     title: Previsão Orçamentária 2023
     type: integer
-  - name: vr_meta_orcamentaria_2024
+  - name: vr_meta_orcamentaria_ano1
     title: Previsão Orçamentária 2024
     type: integer
-  - name: vr_meta_orcamentaria_2025
+  - name: vr_meta_orcamentaria_ano2
     title: Previsão Orçamentária 2025
     type: integer
-  - name: vr_meta_orcamentaria_2026
+  - name: vr_meta_orcamentaria_ano3
     title: Previsão Orçamentária 2026
     type: integer
-  - name: vr_meta_fisica_2023
+  - name: vr_meta_fisica_ano0
     title: Previsão Física 2023
     type: integer
-  - name: vr_meta_fisica_2024
+  - name: vr_meta_fisica_ano1
     title: Previsão Física 2024
     type: integer
-  - name: vr_meta_fisica_2025
+  - name: vr_meta_fisica_ano2
     title: Previsão Física 2025
     type: integer
-  - name: vr_meta_fisica_2026
+  - name: vr_meta_fisica_ano3
     title: Previsão Física 2026
     type: integer
   - name: is_acao_transposta
