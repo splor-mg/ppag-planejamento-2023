@@ -1,174 +1,174 @@
 fields:
-  - name: programa_cod
-    title: Código do Programa
+  - name: Código do Programa
+    title: programa_cod
     type: integer
-  - name: programa_desc
-    title: Nome do Programa
+  - name: Nome do Programa
+    title: programa_desc
     type: string
-  - name: area_tematica_cod
-    title: Código da Área Temática
+  - name: Código da Área Temática
+    title: area_tematica_cod
     type: string
-  - name: area_tematica_desc
-    title: Área Temática
+  - name: Área Temática
+    title: area_tematica_desc
     type: string
-  - name: is_deleted_programa
-    title: Exclusão Lógica do Programa
+  - name: Exclusão Lógica do Programa
+    title: is_deleted_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: is_new_programa
-    title: Programa Novo
+  - name: Programa Novo
+    title: is_new_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: justificativa_is_new_programa
-    title: Justificativa de Inclusão ou Exclusão do Programa
+  - name: Justificativa de Inclusão ou Exclusão do Programa
+    title: justificativa_is_new_programa
     type: string
-  - name: uo_programa_cod
-    title: Código da Unidade Orçamentária Responsável pelo Programa
+  - name: Código da Unidade Orçamentária Responsável pelo Programa
+    title: uo_programa_cod
     type: integer
-  - name: uo_programa_nome
-    title: Unidade Orçamentária Responsável pelo Programa
+  - name: Unidade Orçamentária Responsável pelo Programa
+    title: uo_programa_nome
     type: string
-  - name: uo_acao_cod
-    title: Código da Unidade Orçamentária Responsável pela Ação
+  - name: Código da Unidade Orçamentária Responsável pela Ação
+    title: uo_acao_cod
     type: integer
-  - name: uo_acao_nome
-    title: Unidade Orçamentária Responsável pela Ação
+  - name: Unidade Orçamentária Responsável pela Ação
+    title: uo_acao_nome
     type: string
-  - name: funcao_cod
-    title: Código da Função
+  - name: Código da Função
+    title: funcao_cod
     type: integer
-  - name: funcao_desc
-    title: Função
+  - name: Função
+    title: funcao_desc
     type: string
-  - name: subfuncao_cod
-    title: Código da Subfunção
+  - name: Código da Subfunção
+    title: subfuncao_cod
     type: integer
-  - name: subfuncao_desc
-    title: Subfunção
+  - name: Subfunção
+    title: subfuncao_desc
     type: string
-  - name: identificador_tipo_acao_cod
-    title: Código do Tipo de Ação
+  - name: Código do Tipo de Ação
+    title: identificador_tipo_acao_cod
     type: integer
-  - name: identificador_tipo_acao_desc
-    title: Tipo de Ação
+  - name: Tipo de Ação
+    title: identificador_tipo_acao_desc
     type: string
-  - name: acao_cod
-    title: Código da Ação
+  - name: Código da Ação
+    title: acao_cod
     type: integer
-  - name: acao_desc
-    title: Título da Ação
+  - name: Título da Ação
+    title: acao_desc
     type: string
-  - name: iag_cod
-    title: Código do Identificador de Ação Governamental (IAG)
+  - name: Código do Identificador de Ação Governamental (IAG)
+    title: iag_cod
     type: integer
-  - name: iag_desc
-    title: Identificador de Ação Governamental (IAG)
+  - name: Identificador de Ação Governamental (IAG)
+    title: iag_desc
     type: string
-  - name: projeto_estrategico_cod
-    title: Código do Projeto Estratégico
+  - name: Código do Projeto Estratégico
+    title: projeto_estrategico_cod
     type: string
-  - name: projeto_estrategico
-    title: Projeto Estratégico
+  - name: Projeto Estratégico
+    title: projeto_estrategico
     type: string
-  - name: is_deleted_acao
-    title: Exclusão Lógica da Ação
+  - name: Exclusão Lógica da Ação
+    title: is_deleted_acao
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: is_new_acao
-    title: Nova Ação
+  - name: Nova Ação
+    title: is_new_acao
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: justificativa_is_new_acao
-    title: Justificativa de Inclusão ou Exclusão da Ação
+  - name: Justificativa de Inclusão ou Exclusão da Ação
+    title: justificativa_is_new_acao
     type: string
-  - name: is_transferida_sisor
-    title: Transferida para o SISOR
+  - name: Transferida para o SISOR
+    title: is_transferida_sisor
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: ua_acao_nome
-    title: Unidade Administrativa Responsável pela Ação
+  - name: Unidade Administrativa Responsável pela Ação
+    title: ua_acao_nome
     type: string
-  - name: base_legal
-    title: Base legal
+  - name: Base legal
+    title: base_legal
     type: string
-  - name: acao_finalidade
-    title: Finalidade da Ação
+  - name: Finalidade da Ação
+    title: acao_finalidade
     type: string
-  - name: acao_descricao
-    title: Descrição da Ação
+  - name: Descrição da Ação
+    title: acao_descricao
     type: string
-  - name: publico_alvo_cod
-    title: Código do Público-alvo
+  - name: Código do Público-alvo
+    title: publico_alvo_cod
     type: integer
-  - name: publico_alvo_desc
-    title: Público-Alvo
+  - name: Público-Alvo
+    title: publico_alvo_desc
     type: string
-  - name: produto_cod
-    title: Código do Produto
+  - name: Código do Produto
+    title: produto_cod
     type: integer
-  - name: produto_desc
-    title: Produto
+  - name: Produto
+    title: produto_desc
     type: string
-  - name: produto_especificacao
-    title: Especificação do Produto
+  - name: Especificação do Produto
+    title: produto_especificacao
     type: string
-  - name: produto_unidade_medida_cod
-    title: Código da Unidade de Medida do Produto
+  - name: Código da Unidade de Medida do Produto
+    title: produto_unidade_medida_cod
     type: integer
-  - name: produto_unidade_medida_desc
-    title: Unidade de Medida do Produto
+  - name: Unidade de Medida do Produto
+    title: produto_unidade_medida_desc
     type: string
-  - name: vr_meta_orcamentaria_ano0
-    title: Previsão Orçamentária 2023
+  - name: Previsão Orçamentária 2023
+    title: vr_meta_orcamentaria_ano0
     type: integer
-  - name: vr_meta_orcamentaria_ano1
-    title: Previsão Orçamentária 2024
+  - name: Previsão Orçamentária 2024
+    title: vr_meta_orcamentaria_ano1
     type: integer
-  - name: vr_meta_orcamentaria_ano2
-    title: Previsão Orçamentária 2025
+  - name: Previsão Orçamentária 2025
+    title: vr_meta_orcamentaria_ano2
     type: integer
-  - name: vr_meta_orcamentaria_ano3
-    title: Previsão Orçamentária 2026
+  - name: Previsão Orçamentária 2026
+    title: vr_meta_orcamentaria_ano3
     type: integer
-  - name: vr_meta_fisica_ano0
-    title: Previsão Física 2023
+  - name: Previsão Física 2023
+    title: vr_meta_fisica_ano0
     type: integer
-  - name: vr_meta_fisica_ano1
-    title: Previsão Física 2024
+  - name: Previsão Física 2024
+    title: vr_meta_fisica_ano1
     type: integer
-  - name: vr_meta_fisica_ano2
-    title: Previsão Física 2025
+  - name: Previsão Física 2025
+    title: vr_meta_fisica_ano2
     type: integer
-  - name: vr_meta_fisica_ano3
-    title: Previsão Física 2026
+  - name: Previsão Física 2026
+    title: vr_meta_fisica_ano3
     type: integer
-  - name: is_acao_transposta
-    title: Ação Transposta
+  - name: Ação Transposta
+    title: is_acao_transposta
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: setor_governo
-    title: Setor de Governo
+  - name: Setor de Governo
+    title: setor_governo
     type: string
 primaryKey:
-  - uo_acao_cod
-  - acao_cod
-  - is_deleted_acao
+  - Código da Unidade Orçamentária Responsável pela Ação
+  - Código da Ação
+  - Exclusão Lógica da Ação
 foreignKeys:
   - fields:
-      - uo_programa_cod
+      - Código da Unidade Orçamentária Responsável pelo Programa
     reference:
       fields:
-        - uo_programa_cod
+        - Código da Unidade Orçamentária Responsável pelo Programa
       resource: programas_planejamento
   - fields:
-      - programa_cod
+      - Código do Programa
     reference:
       fields:
-        - programa_cod
+        - Código do Programa
       resource: programas_planejamento

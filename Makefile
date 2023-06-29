@@ -1,17 +1,23 @@
-.PHONY: all extract transform check publish
+.PHONY: all extract transform build check publish
 
+EXT = txt
+INPUT_DIR = data-raw
+OUTPUT_DIR = data
 RESOURCE_NAMES := $(shell yq e '.resources[].name' datapackage.yaml)
-DATA_FILES := $(addsuffix .csv,$(addprefix data/,$(RESOURCE_NAMES)))
+OUTPUT_FILES := $(addsuffix .csv,$(addprefix $(OUTPUT_DIR)/,$(RESOURCE_NAMES)))
 
-all: extract transform check publish
+all: extract transform build check publish
 
 extract: 
-	$(foreach resource_name, $(RESOURCE_NAMES), python scripts/extract.py $(resource_name);)
+	$(foreach resource_name, $(RESOURCE_NAMES), python main.py extract $(resource_name);)
 
-transform: $(DATA_FILES)
+transform: $(OUTPUT_FILES)
 
-$(DATA_FILES): data/%.csv: data/raw/%.txt schemas/%.yaml scripts/transform.py datapackage.yaml
-	python scripts/transform.py $*
+$(OUTPUT_FILES): $(OUTPUT_DIR)/%.csv: $(INPUT_DIR)/%.$(EXT) schemas/%.yaml scripts/transform.py datapackage.yaml
+	python main.py transform $* $@
+
+build: transform
+	python main.py build $(OUTPUT_DIR)
 
 check: checks-python
 
@@ -20,5 +26,5 @@ checks-python:
 
 publish: 
 	git add -Af data/*.csv
-	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package" || exit 0
+	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package at: $$(date +%Y-%m-%dT%H:%M:%SZ)" || exit 0
 	git push

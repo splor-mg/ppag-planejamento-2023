@@ -1,120 +1,120 @@
 fields:
-  - name: programa_cod
-    title: Código do Programa
+  - name: Código do Programa
+    title: programa_cod
     type: integer
-  - name: programa_desc
-    title: Nome do Programa
+  - name: Nome do Programa
+    title: programa_desc
     type: string
-  - name: area_tematica_cod
-    title: Código da Área Temática
+  - name: Código da Área Temática
+    title: area_tematica_cod
     type: string
-  - name: area_tematica_desc
-    title: Área Temática
+  - name: Área Temática
+    title: area_tematica_desc
     type: string
-  - name: is_deleted_programa
-    title: Exclusão Lógica do Programa
+  - name: Exclusão Lógica do Programa
+    title: is_deleted_programa
     type: boolean
-  - name: acao_cod
-    title: Código da Ação
+  - name: Código da Ação
+    title: acao_cod
     type: integer
-  - name: titulo_da_acao
-    title: Título da Ação
+  - name: Título da Ação
+    title: titulo_da_acao
     type: string
-  - name: iag_cod
-    title: Código do Identificador de Ação Governamental (IAG)
+  - name: Código do Identificador de Ação Governamental (IAG)
+    title: iag_cod
     type: integer
-  - name: iag_desc
-    title: Identificador de Ação Governamental (IAG)
+  - name: Identificador de Ação Governamental (IAG)
+    title: iag_desc
     type: string
-  - name: projeto_estrategico_cod
-    title: Código do Projeto Estratégico
+  - name: Código do Projeto Estratégico
+    title: projeto_estrategico_cod
     type: string
-  - name: projeto_estrategico_desc
-    title: Projeto Estratégico
+  - name: Projeto Estratégico
+    title: projeto_estrategico_desc
     type: string
-  - name: funcao_cod
-    title: Código da Função
+  - name: Código da Função
+    title: funcao_cod
     type: integer
-  - name: funcao_desc
-    title: Função
+  - name: Função
+    title: funcao_desc
     type: string
-  - name: subfuncao_cod
-    title: Código da Subfunção
+  - name: Código da Subfunção
+    title: subfuncao_cod
     type: integer
-  - name: subfuncao_desc
-    title: SubFunção
+  - name: SubFunção
+    title: subfuncao_desc
     type: string
-  - name: uo_acao_cod
-    title: Código da Unidade Orçamentária Responsável pela Ação
+  - name: Código da Unidade Orçamentária Responsável pela Ação
+    title: uo_acao_cod
     type: integer
-  - name: uo_acao_nome
-    title: Unidade Orçamentária Responsável pela Ação
+  - name: Unidade Orçamentária Responsável pela Ação
+    title: uo_acao_nome
     type: string
-  - name: is_deleted_acao
-    title: Exclusão Lógica da Ação
+  - name: Exclusão Lógica da Ação
+    title: is_deleted_acao
     type: boolean
-  - name: localizador_cod
-    title: Código do Localizador
+  - name: Código do Localizador
+    title: localizador_cod
     type: string
-  - name: is_deleted_localizador
-    title: Exclusão Lógica do Localizador
+  - name: Exclusão Lógica do Localizador
+    title: is_deleted_localizador
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: regiao_geografica_cod
-    title: Código da Região Geográfica Intermediária
+  - name: Código da Região Geográfica Intermediária
+    title: regiao_geografica_cod
     type: integer
-  - name: regiao_geografica_desc
-    title: Região Geográfica Intermediária
+  - name: Região Geográfica Intermediária
+    title: regiao_geografica_desc
     type: string
-  - name: municipio_ibge_cod
-    title: Código do Município IBGE
+  - name: Código do Município IBGE
+    title: municipio_ibge_cod
     type: integer
-  - name: municipio_sigplan_cod
-    title: Código do Município Sigplan
+  - name: Código do Município Sigplan
+    title: municipio_sigplan_cod
     type: integer
-  - name: municipio
-    title: Município
+  - name: Município
+    title: municipio
     type: string
-  - name: vr_meta_orcamentaria_ano0
-    title: Previsão Orçamentária 2023
+  - name: Previsão Orçamentária 2023
+    title: vr_meta_orcamentaria_ano0
     type: integer
-  - name: vr_meta_fisica_ano0
-    title: Previsão Física 2023
+  - name: Previsão Física 2023
+    title: vr_meta_fisica_ano0
     type: integer
-  - name: vr_meta_orcamentaria_ano1
-    title: Previsão Orçamentária 2024
+  - name: Previsão Orçamentária 2024
+    title: vr_meta_orcamentaria_ano1
     type: integer
-  - name: vr_meta_fisica_ano1
-    title: Previsão Física 2024
+  - name: Previsão Física 2024
+    title: vr_meta_fisica_ano1
     type: integer
-  - name: vr_meta_orcamentaria_ano2
-    title: Previsão Orçamentária 2025
+  - name: Previsão Orçamentária 2025
+    title: vr_meta_orcamentaria_ano2
     type: integer
-  - name: vr_meta_fisica_ano2
-    title: Previsão Física 2025
+  - name: Previsão Física 2025
+    title: vr_meta_fisica_ano2
     type: integer
-  - name: vr_meta_orcamentaria_ano3
-    title: Previsão Orçamentária 2026
+  - name: Previsão Orçamentária 2026
+    title: vr_meta_orcamentaria_ano3
     type: integer
-  - name: vr_meta_fisica_ano3
-    title: Previsão Física 2026
+  - name: Previsão Física 2026
+    title: vr_meta_fisica_ano3
     type: integer
 primaryKey:
-  - uo_acao_cod
-  - acao_cod
-  - is_deleted_acao
-  - localizador_cod
+  - Código da Unidade Orçamentária Responsável pela Ação
+  - Código da Ação
+  - Exclusão Lógica da Ação
+  - Código do Localizador
 foreignKeys:
   - fields:
-      - uo_acao_cod
+      - Código da Unidade Orçamentária Responsável pela Ação
     reference:
       fields:
-        - uo_acao_cod
+        - Código da Unidade Orçamentária Responsável pela Ação
       resource: acoes_planejamento
   - fields:
-      - acao_cod
+      - Código da Ação
     reference:
       fields:
-        - acao_cod
+        - Código da Ação
       resource: acoes_planejamento

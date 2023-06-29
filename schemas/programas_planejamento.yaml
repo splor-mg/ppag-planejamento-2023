@@ -1,101 +1,101 @@
 fields:
-  - name: programa_cod
-    title: Código do Programa
+  - name: Código do Programa
+    title: programa_cod
     type: integer
-  - name: programa_desc
-    title: Nome do Programa
+  - name: Nome do Programa
+    title: programa_desc
     type: string
-  - name: is_deleted_programa
-    title: Exclusão Lógica do Programa
+  - name: Exclusão Lógica do Programa
+    title: is_deleted_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: is_new_programa
-    title: Programa Novo
+  - name: Programa Novo
+    title: is_new_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: area_tematica_cod
-    title: Código da Área Temática
+  - name: Código da Área Temática
+    title: area_tematica_cod
     type: string
-  - name: area_tematica_desc
-    title: Área Temática
+  - name: Área Temática
+    title: area_tematica_desc
     type: string
-  - name: objetivo_estrategico_cod
-    title: Código do Objetivo Estratégico
+  - name: Código do Objetivo Estratégico
+    title: objetivo_estrategico_cod
     type: integer
-  - name: objetivo_estrategico_desc
-    title: Objetivo Estratégico
+  - name: Objetivo Estratégico
+    title: objetivo_estrategico_desc
     type: string
-  - name: diretriz_estrategica_cod
-    title: Código da Diretriz Estratégica
+  - name: Código da Diretriz Estratégica
+    title: diretriz_estrategica_cod
     type: string
-  - name: diretriz_estrategica_desc
-    title: Diretriz Estratégica
+  - name: Diretriz Estratégica
+    title: diretriz_estrategica_desc
     type: string
-  - name: justificativa_is_new_programa
-    title: Justificativa de Inclusão ou Exclusão do Programa
+  - name: Justificativa de Inclusão ou Exclusão do Programa
+    title: justificativa_is_new_programa
     type: string
-  - name: orgao_programa_cod
-    title: Código do Órgão Responsável pelo Programa
+  - name: Código do Órgão Responsável pelo Programa
+    title: orgao_programa_cod
     type: integer
-  - name: orgao_programa_nome
-    title: Órgão Responsável pelo Programa
+  - name: Órgão Responsável pelo Programa
+    title: orgao_programa_nome
     type: string
-  - name: uo_programa_cod
-    title: Código da Unidade Orçamentária Responsável pelo Programa
+  - name: Código da Unidade Orçamentária Responsável pelo Programa
+    title: uo_programa_cod
     type: integer
-  - name: uo_programa_nome
-    title: Unidade Orçamentária Responsável pelo Programa
+  - name: Unidade Orçamentária Responsável pelo Programa
+    title: uo_programa_nome
     type: string
-  - name: objetivo
-    title: Objetivo
+  - name: Objetivo
+    title: objetivo
     type: string
-  - name: justificativa
-    title: Justificativa
+  - name: Justificativa
+    title: justificativa
     type: string
-  - name: tipo_de_programa
-    title: Tipo de Programa
+  - name: Tipo de Programa
+    title: tipo_de_programa
     type: string
-  - name: horizonte_temporal
-    title: Horizonte Temporal
+  - name: Horizonte Temporal
+    title: horizonte_temporal
     type: string
-  - name: estrategia_de_implementacao
-    title: Estratégia de Implementação
+  - name: Estratégia de Implementação
+    title: estrategia_de_implementacao
     type: string
-  - name: ua_programa_nome
-    title: Unidade Administrativa Responsável pelo Programa
+  - name: Unidade Administrativa Responsável pelo Programa
+    title: ua_programa_nome
     type: string
-  - name: vr_meta_orcamentaria_ano0
-    title: Previsão Orçamentária 2023
+  - name: Previsão Orçamentária 2023
+    title: vr_meta_orcamentaria_ano0
     type: integer
-  - name: vr_meta_orcamentaria_ano1
-    title: Previsão Orçamentária 2024
+  - name: Previsão Orçamentária 2024
+    title: vr_meta_orcamentaria_ano1
     type: integer
-  - name: vr_meta_orcamentaria_ano2
-    title: Previsão Orçamentária 2025
+  - name: Previsão Orçamentária 2025
+    title: vr_meta_orcamentaria_ano2
     type: integer
-  - name: vr_meta_orcamentaria_ano3
-    title: Previsão Orçamentária 2026
+  - name: Previsão Orçamentária 2026
+    title: vr_meta_orcamentaria_ano3
     type: integer
-  - name: is_programa_transposto
-    title: Programa Transposto
+  - name: Programa Transposto
+    title: is_programa_transposto
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
-  - name: causas
-    title: Causas
+  - name: Causas
+    title: causas
     type: string
-  - name: ods_titulo
-    title: Título do Objetivo de Desenvolvimento Sustentável
+  - name: Título do Objetivo de Desenvolvimento Sustentável
+    title: ods_titulo
     type: string
-  - name: ods_subtitulo
-    title: Subtítulo do Objetivo de Desenvolvimento Sustentável
+  - name: Subtítulo do Objetivo de Desenvolvimento Sustentável
+    title: ods_subtitulo
     type: string
 primaryKey:
-  - uo_programa_cod
-  - programa_cod
-  - is_deleted_programa
-  - objetivo_estrategico_cod
-  - diretriz_estrategica_cod
-  - ods_titulo
+  - Código da Unidade Orçamentária Responsável pelo Programa
+  - Código do Programa
+  - Exclusão Lógica do Programa
+  - Código do Objetivo Estratégico
+  - Código da Diretriz Estratégica
+  - Título do Objetivo de Desenvolvimento Sustentável
