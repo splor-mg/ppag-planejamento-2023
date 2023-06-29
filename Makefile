@@ -25,6 +25,6 @@ checks-python:
 	python -m pytest checks/python/
 
 publish: 
-	git add -Af data/*.csv
+	git add -Af data/*.csv data/datapackage.json
 	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package at: $$(date +%Y-%m-%dT%H:%M:%SZ)" || exit 0
 	git push
