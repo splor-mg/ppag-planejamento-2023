@@ -1,22 +1,17 @@
-from frictionless import Package, Resource, Dialect
+from frictionless import Package, steps, transform
 import petl as etl
 import logging
-import typer
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-def transform(resource_name, descriptor):
+def transform_resource(resource_name: str, output_path: Path, descriptor: str = 'datapackage.yaml'):
+    logger.info(f'Transforming resource {resource_name}')
     package = Package(descriptor)
     resource = package.get_resource(resource_name)
-    logger.info(f'Transforming resource {resource.name}')
-    source = Resource(resource.sources[0])
-    table = source.to_petl()
-    field_names = {field.title: field.name for field in resource.schema.fields}
-    table = etl.rename(table, field_names)
-    etl.tocsv(table, resource.path, encoding='utf-8')
-
-def main(resource_name: str, descriptor: str = 'datapackage.yaml'):
-    transform(resource_name, descriptor)
-
-if __name__ == '__main__':
-    typer.run(main)
+    target = transform(resource, steps=[steps.table_normalize()])
+    table = target.to_petl()
+    for field in resource.schema.fields:
+        if field.title:
+            table = etl.rename(table, field.name, field.title)
+    etl.tocsv(table, output_path, encoding='utf-8')

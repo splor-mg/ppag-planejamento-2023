@@ -2,3 +2,4 @@ venv/
 .Rhistory
 .Rproj.user
 data/
+data-raw/

@@ -1,8 +1,7 @@
-from frictionless import Package, Resource, Dialect
+from frictionless import Package
 import requests
 from bs4 import BeautifulSoup
 import logging
-import typer
 import shutil
 from datetime import datetime
 import re
@@ -10,7 +9,7 @@ import pytz
 
 logger = logging.getLogger(__name__)
 
-def extract(resource_name, descriptor):
+def extract_resource(resource_name: str, descriptor: str = 'datapackage.yaml'):
     package = Package(descriptor)
     resource = package.get_resource(resource_name)
 
@@ -18,8 +17,8 @@ def extract(resource_name, descriptor):
     # ATENÇÃO: Ao abrir o arquivo no Excel use o caracter | como separador de campos
     # 22:05:14 - Arquivo : programas_planejamento.txt gerado com sucesso!!!
     # Tempo de Processamento 00:01:13
-    logger.info(f"Geração de arquivo texto para {resource.sources[0]['name']}. Aguarde esse processamento pode ser um pouco demorado!")
-    res = requests.get(resource.sources[0]['api_url']) # Resource is stripping url property
+    logger.info(f"Geração de arquivo texto para {resource_name}. Aguarde esse processamento pode ser um pouco demorado!")
+    res = requests.get(resource.custom['api_url']) # Resource is stripping url property
     res.raise_for_status()
     if 'gerado com sucesso!' not in res.text:
         logger.error('Erro na geração do arquivo texto')
@@ -48,21 +47,9 @@ def extract(resource_name, descriptor):
         if 'Tempo de Processamento' in p.get_text():
             logger.info(p.get_text().strip())
 
-    resource_source = Resource(path=resource.sources[0]['download_url'],
-                               format=resource.sources[0]['format'],
-                               encoding=resource.sources[0]['encoding'],
-                               dialect=Dialect(resource.sources[0]['dialect']),
-                               schema=resource.sources[0]['schema'])
-
-    with resource_source as source:
-        with open(resource.sources[0]['path'], 'wb') as fs:
-            shutil.copyfileobj(source.byte_stream, fs)
-
-def main(resource_name: str, descriptor: str = 'datapackage.yaml'):
-    extract(resource_name, descriptor)
-
-if __name__ == '__main__':
-    LOG_FORMAT = '%(asctime)s %(levelname)-5.5s [%(name)s] %(message)s'
-    LOG_DATE_FORMAT = '%Y-%m-%dT%H:%M:%S%z'
-    logging.basicConfig(format=LOG_FORMAT, datefmt=LOG_DATE_FORMAT, level=logging.INFO)
-    typer.run(main)
+    res = requests.get(resource.custom['download_url'], stream=True)
+    res.raise_for_status()
+    res.raw.decode_content = True
+    
+    with open(resource.path, 'wb') as file:
+        shutil.copyfileobj(res.raw, file)

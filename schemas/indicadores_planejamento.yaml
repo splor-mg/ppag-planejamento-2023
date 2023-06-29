@@ -1,93 +1,93 @@
 fields:
-  - name: programa_cod
-    title: Código do Programa
+  - name: Código do Programa
+    title: programa_cod
     type: integer
-  - name: programa_nome
-    title: Nome do Programa
+  - name: Nome do Programa
+    title: programa_nome
     type: string
-  - name: is_deleted_programa
-    title: Exclusão Lógica do Programa
+  - name: Exclusão Lógica do Programa
+    title: is_deleted_programa
     type: boolean
-  - name: indicador
-    title: Indicador
+  - name: Indicador
+    title: indicador
     type: string
-  - name: is_deleted_indicador
-    title: Exclusão Lógica do Indicador
+  - name: Exclusão Lógica do Indicador
+    title: is_deleted_indicador
     type: boolean
-  - name: unidade_de_medida
-    title: Unidade de Medida
+  - name: Unidade de Medida
+    title: unidade_de_medida
     type: string
-  - name: indice_de_referencia
-    title: Índice de Referência
+  - name: Índice de Referência
+    title: indice_de_referencia
     type: string
-  - name: em_apuracao_indice_de_referencia
-    title: Em apuração? (Índice de Referência)
+  - name: Em apuração? (Índice de Referência)
+    title: em_apuracao_indice_de_referencia
     type: string
-  - name: dt_apuracao
-    title: Data de Apuração
+  - name: Data de Apuração
+    title: dt_apuracao
     type: date
     format: '%d/%m/%Y'
-  - name: previsao_para_ano0
-    title: Previsão para 2023
+  - name: Previsão para 2023
+    title: previsao_para_ano0
     type: string
-  - name: em_apuracao_ano0
-    title: Em apuração? (2023)
+  - name: Em apuração? (2023)
+    title: em_apuracao_ano0
     type: string
-  - name: previsao_para_ano1
-    title: Previsão para 2024
+  - name: Previsão para 2024
+    title: previsao_para_ano1
     type: string
-  - name: em_apuracao_ano1
-    title: Em apuração? (2024)
+  - name: Em apuração? (2024)
+    title: em_apuracao_ano1
     type: string
-  - name: previsao_para_ano2
-    title: Previsão para 2025
+  - name: Previsão para 2025
+    title: previsao_para_ano2
     type: string
-  - name: em_apuracao_ano2
-    title: Em apuração? (2025)
+  - name: Em apuração? (2025)
+    title: em_apuracao_ano2
     type: string
-  - name: previsao_para_ano3
-    title: Previsão para 2026
+  - name: Previsão para 2026
+    title: previsao_para_ano3
     type: string
-  - name: em_apuracao_ano3
-    title: Em apuração? (2026)
+  - name: Em apuração? (2026)
+    title: em_apuracao_ano3
     type: string
-  - name: fonte
-    title: Fonte
+  - name: Fonte
+    title: fonte
     type: string
-  - name: periodicidade
-    title: Periodicidade
+  - name: Periodicidade
+    title: periodicidade
     type: string
-  - name: base_geografica
-    title: Base Geográfica
+  - name: Base Geográfica
+    title: base_geografica
     type: string
-  - name: formula_de_calculo
-    title: Fórmula de Cálculo
+  - name: Fórmula de Cálculo
+    title: formula_de_calculo
     type: string
-  - name: justificativa_status_apuracao_previsoes
-    title: Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)
+  - name: Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)
+    title: justificativa_status_apuracao_previsoes
     type: string
-  - name: justificativa_status_apuracao_indice_ref
-    title: Justificativa do Status em apuração do Índice de Referência
+  - name: Justificativa do Status em apuração do Índice de Referência
+    title: justificativa_status_apuracao_indice_ref
     type: string
-  - name: updated_at
-    title: Data Alteração
+  - name: Data Alteração
+    title: updated_at
     type: datetime
     format: '%d/%m/%Y %H:%M:%S'
-  - name: is_indicador_new
-    title: Indicador Novo?
+  - name: Indicador Novo?
+    title: is_indicador_new
     type: boolean
-  - name: polaridade
-    title: Polaridade
+  - name: Polaridade
+    title: polaridade
     type: string
 primaryKey:
-  - programa_cod
-  - is_deleted_programa
-  - indicador
-  - is_deleted_indicador
+  - Código do Programa
+  - Exclusão Lógica do Programa
+  - Indicador
+  - Exclusão Lógica do Indicador
 foreignKeys:
   - fields:
-      - programa_cod
+      - Código do Programa
     reference:
       fields:
-        - programa_cod
+        - Código do Programa
       resource: programas_planejamento
