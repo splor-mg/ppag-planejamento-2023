@@ -22,11 +22,11 @@ jobs:
       with:
         context: .
         push: true
-        tags: fjuniorr/ppag-planejamento:latest
-        cache-from: type=registry,ref=fjuniorr/ppag-planejamento:latest
+        tags: fjuniorr/${{ github.event.repository.name }}:latest
+        cache-from: type=registry,ref=fjuniorr/${{ github.event.repository.name }}:latest
         cache-to: type=inline
     - name: ETL pipeline
-      run: docker run --rm --mount type=bind,source=${PWD},target=/project fjuniorr/ppag-planejamento make all
+      run: docker run --rm --mount type=bind,source=${PWD},target=/project fjuniorr/${{ github.event.repository.name }} make all
     - name: Publish data package
       run: |-
         git config user.name "Automated"
