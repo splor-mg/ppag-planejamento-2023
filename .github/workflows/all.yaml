@@ -26,7 +26,7 @@ jobs:
         cache-from: type=registry,ref=fjuniorr/ppag-planejamento:latest
         cache-to: type=inline
     - name: ETL pipeline
-      run: docker run --rm --mount type=bind,source=${PWD},target=/project ppag-planejamento make all
+      run: docker run --rm --mount type=bind,source=${PWD},target=/project fjuniorr/ppag-planejamento make all
     - name: Publish data package
       run: |-
         git config user.name "Automated"
