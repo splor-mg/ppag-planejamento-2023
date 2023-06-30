@@ -6,7 +6,7 @@ OUTPUT_DIR = data
 RESOURCE_NAMES := $(shell yq e '.resources[].name' datapackage.yaml)
 OUTPUT_FILES := $(addsuffix .csv,$(addprefix $(OUTPUT_DIR)/,$(RESOURCE_NAMES)))
 
-all: extract transform build check publish
+all: extract transform build check
 
 extract: 
 	$(foreach resource_name, $(RESOURCE_NAMES),python main.py extract $(resource_name) &&) true
