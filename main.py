@@ -4,7 +4,7 @@ from scripts.extract import extract_resource
 from scripts.transform import transform_resource
 from scripts.build import build_package
 
-app = typer.Typer()
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 @app.callback()
 def callback():

@@ -6,10 +6,10 @@ OUTPUT_DIR = data
 RESOURCE_NAMES := $(shell yq e '.resources[].name' datapackage.yaml)
 OUTPUT_FILES := $(addsuffix .csv,$(addprefix $(OUTPUT_DIR)/,$(RESOURCE_NAMES)))
 
-all: extract transform build check publish
+all: extract transform build check
 
 extract: 
-	$(foreach resource_name, $(RESOURCE_NAMES), python main.py extract $(resource_name);)
+	$(foreach resource_name, $(RESOURCE_NAMES),python main.py extract $(resource_name) &&) true
 
 transform: $(OUTPUT_FILES)
 
@@ -25,6 +25,6 @@ checks-python:
 	python -m pytest checks/python/
 
 publish: 
-	git add -Af data/*.csv data/datapackage.json
+	git add -Af $(OUTPUT_DIR)/*.csv: $(INPUT_DIR)/*.$(EXT) $(OUTPUT_DIR)/datapackage.json
 	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package at: $$(date +%Y-%m-%dT%H:%M:%SZ)" || exit 0
 	git push
