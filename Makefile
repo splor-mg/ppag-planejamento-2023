@@ -19,10 +19,8 @@ $(OUTPUT_FILES): $(OUTPUT_DIR)/%.csv: $(INPUT_DIR)/%.$(EXT) schemas/%.yaml scrip
 build: transform
 	python main.py build $(OUTPUT_DIR)
 
-check: checks-python
-
-checks-python:
-	python -m pytest checks/python/
+check: 
+	frictionless validate datapackage.yaml
 
 publish: 
 	git add -Af $(OUTPUT_DIR)/*.csv: $(INPUT_DIR)/*.$(EXT) $(OUTPUT_DIR)/datapackage.json
