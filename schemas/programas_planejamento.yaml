@@ -68,16 +68,16 @@ fields:
     type: string
   - name: Previsão Orçamentária 2023
     title: vr_meta_orcamentaria_ano0
-    type: integer
+    type: number
   - name: Previsão Orçamentária 2024
     title: vr_meta_orcamentaria_ano1
-    type: integer
+    type: number
   - name: Previsão Orçamentária 2025
     title: vr_meta_orcamentaria_ano2
-    type: integer
+    type: number
   - name: Previsão Orçamentária 2026
     title: vr_meta_orcamentaria_ano3
-    type: integer
+    type: number
   - name: Programa Transposto
     title: is_programa_transposto
     type: boolean
