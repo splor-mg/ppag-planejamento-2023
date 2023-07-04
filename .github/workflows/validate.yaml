@@ -1,4 +1,4 @@
-name: Checks
+name: Validated
 
 on:
   workflow_dispatch:
@@ -12,4 +12,4 @@ jobs:
     - name: Build docker image
       run: docker build --tag ppag-planejamento .
     - name: Run pipeline
-      run: docker run --rm --mount type=bind,source=${PWD},target=/project ppag-planejamento make check
+      run: docker run --rm --mount type=bind,source=${PWD},target=/project ppag-planejamento make validate
