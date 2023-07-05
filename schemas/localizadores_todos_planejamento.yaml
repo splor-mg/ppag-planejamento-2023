@@ -1,104 +1,104 @@
 fields:
   - name: Código do Programa
-    title: programa_cod
+    target: programa_cod
     type: integer
   - name: Nome do Programa
-    title: programa_desc
+    target: programa_desc
     type: string
   - name: Código da Área Temática
-    title: area_tematica_cod
+    target: area_tematica_cod
     type: string
   - name: Área Temática
-    title: area_tematica_desc
+    target: area_tematica_desc
     type: string
   - name: Exclusão Lógica do Programa
-    title: is_deleted_programa
+    target: is_deleted_programa
     type: boolean
   - name: Código da Ação
-    title: acao_cod
+    target: acao_cod
     type: integer
   - name: Título da Ação
-    title: titulo_da_acao
+    target: titulo_da_acao
     type: string
   - name: Código do Identificador de Ação Governamental (IAG)
-    title: iag_cod
+    target: iag_cod
     type: integer
   - name: Identificador de Ação Governamental (IAG)
-    title: iag_desc
+    target: iag_desc
     type: string
   - name: Código do Projeto Estratégico
-    title: projeto_estrategico_cod
+    target: projeto_estrategico_cod
     type: string
   - name: Projeto Estratégico
-    title: projeto_estrategico_desc
+    target: projeto_estrategico_desc
     type: string
   - name: Código da Função
-    title: funcao_cod
+    target: funcao_cod
     type: integer
   - name: Função
-    title: funcao_desc
+    target: funcao_desc
     type: string
   - name: Código da Subfunção
-    title: subfuncao_cod
+    target: subfuncao_cod
     type: integer
   - name: SubFunção
-    title: subfuncao_desc
+    target: subfuncao_desc
     type: string
   - name: Código da Unidade Orçamentária Responsável pela Ação
-    title: uo_acao_cod
+    target: uo_acao_cod
     type: integer
   - name: Unidade Orçamentária Responsável pela Ação
-    title: uo_acao_nome
+    target: uo_acao_nome
     type: string
   - name: Exclusão Lógica da Ação
-    title: is_deleted_acao
+    target: is_deleted_acao
     type: boolean
   - name: Código do Localizador
-    title: localizador_cod
+    target: localizador_cod
     type: string
   - name: Exclusão Lógica do Localizador
-    title: is_deleted_localizador
+    target: is_deleted_localizador
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
   - name: Código da Região Geográfica Intermediária
-    title: regiao_geografica_cod
+    target: regiao_geografica_cod
     type: integer
   - name: Região Geográfica Intermediária
-    title: regiao_geografica_desc
+    target: regiao_geografica_desc
     type: string
   - name: Código do Município IBGE
-    title: municipio_ibge_cod
+    target: municipio_ibge_cod
     type: integer
   - name: Código do Município Sigplan
-    title: municipio_sigplan_cod
+    target: municipio_sigplan_cod
     type: integer
   - name: Município
-    title: municipio
+    target: municipio
     type: string
   - name: Previsão Orçamentária 2023
-    title: vr_meta_orcamentaria_ano0
+    target: vr_meta_orcamentaria_ano0
     type: number
   - name: Previsão Física 2023
-    title: vr_meta_fisica_ano0
+    target: vr_meta_fisica_ano0
     type: integer
   - name: Previsão Orçamentária 2024
-    title: vr_meta_orcamentaria_ano1
+    target: vr_meta_orcamentaria_ano1
     type: number
   - name: Previsão Física 2024
-    title: vr_meta_fisica_ano1
+    target: vr_meta_fisica_ano1
     type: integer
   - name: Previsão Orçamentária 2025
-    title: vr_meta_orcamentaria_ano2
+    target: vr_meta_orcamentaria_ano2
     type: number
   - name: Previsão Física 2025
-    title: vr_meta_fisica_ano2
+    target: vr_meta_fisica_ano2
     type: integer
   - name: Previsão Orçamentária 2026
-    title: vr_meta_orcamentaria_ano3
+    target: vr_meta_orcamentaria_ano3
     type: number
   - name: Previsão Física 2026
-    title: vr_meta_fisica_ano3
+    target: vr_meta_fisica_ano3
     type: integer
 primaryKey:
   - Código da Unidade Orçamentária Responsável pela Ação
