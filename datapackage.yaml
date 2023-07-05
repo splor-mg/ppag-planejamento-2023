@@ -3,7 +3,7 @@ resources:
   - name: acoes_planejamento
     title: Relatórios e Bases do Planejamento - Ações
     path: data-raw/acoes_planejamento.txt
-    api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_programas_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
+    api_url: https://www.sigplan.mg.gov.br/v4/Relatorios/base_acoes_planejamento.asp?tipo_saida=2&mostraSQL=N&periodo=undefined
     download_url: https://www.sigplan.mg.gov.br/BasesTxt/acoes_planejamento.txt
     format: csv
     encoding: windows-1252
