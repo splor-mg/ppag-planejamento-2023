@@ -15,7 +15,14 @@ def build_package(output_path: Path, descriptor: str = 'datapackage.yaml'):
             "path": f'data/{resource_name}.csv',
             "format": "csv",
             "encoding": "utf-8",
-            "schema": {"fields": []}
+            "schema": {"fields": [
+                {
+                'name': field.custom['target'] if field.custom.get('target') else field.name,
+                'title': field.title if field.title else field.name,
+                'type': field.type,
+                'source': field.name,
+                } for field in package.get_resource(resource_name).schema.fields                
+            ]}
             } for resource_name in package.resource_names
         ]
     }
@@ -23,10 +30,7 @@ def build_package(output_path: Path, descriptor: str = 'datapackage.yaml'):
     output = Package.from_descriptor(output_descriptor)
     output.custom['updated_at'] = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
     for resource in output.resources:
-        schema = Schema.describe(resource.path)
-        resource.schema = schema
         resource.infer(stats=True)
-
         resource = transform(resource, 
                              steps=[
                                  steps.resource_update(name = resource.name, 

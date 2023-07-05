@@ -1,96 +1,96 @@
 fields:
   - name: Código do Programa
-    title: programa_cod
+    target: programa_cod
     type: integer
   - name: Nome do Programa
-    title: programa_desc
+    target: programa_desc
     type: string
   - name: Exclusão Lógica do Programa
-    title: is_deleted_programa
+    target: is_deleted_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
   - name: Programa Novo
-    title: is_new_programa
+    target: is_new_programa
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
   - name: Código da Área Temática
-    title: area_tematica_cod
+    target: area_tematica_cod
     type: string
   - name: Área Temática
-    title: area_tematica_desc
+    target: area_tematica_desc
     type: string
   - name: Código do Objetivo Estratégico
-    title: objetivo_estrategico_cod
+    target: objetivo_estrategico_cod
     type: integer
   - name: Objetivo Estratégico
-    title: objetivo_estrategico_desc
+    target: objetivo_estrategico_desc
     type: string
   - name: Código da Diretriz Estratégica
-    title: diretriz_estrategica_cod
+    target: diretriz_estrategica_cod
     type: string
   - name: Diretriz Estratégica
-    title: diretriz_estrategica_desc
+    target: diretriz_estrategica_desc
     type: string
   - name: Justificativa de Inclusão ou Exclusão do Programa
-    title: justificativa_is_new_programa
+    target: justificativa_is_new_programa
     type: string
   - name: Código do Órgão Responsável pelo Programa
-    title: orgao_programa_cod
+    target: orgao_programa_cod
     type: integer
   - name: Órgão Responsável pelo Programa
-    title: orgao_programa_nome
+    target: orgao_programa_nome
     type: string
   - name: Código da Unidade Orçamentária Responsável pelo Programa
-    title: uo_programa_cod
+    target: uo_programa_cod
     type: integer
   - name: Unidade Orçamentária Responsável pelo Programa
-    title: uo_programa_nome
+    target: uo_programa_nome
     type: string
   - name: Objetivo
-    title: objetivo
+    target: objetivo
     type: string
   - name: Justificativa
-    title: justificativa
+    target: justificativa
     type: string
   - name: Tipo de Programa
-    title: tipo_de_programa
+    target: tipo_de_programa
     type: string
   - name: Horizonte Temporal
-    title: horizonte_temporal
+    target: horizonte_temporal
     type: string
   - name: Estratégia de Implementação
-    title: estrategia_de_implementacao
+    target: estrategia_de_implementacao
     type: string
   - name: Unidade Administrativa Responsável pelo Programa
-    title: ua_programa_nome
+    target: ua_programa_nome
     type: string
   - name: Previsão Orçamentária 2023
-    title: vr_meta_orcamentaria_ano0
+    target: vr_meta_orcamentaria_ano0
     type: number
   - name: Previsão Orçamentária 2024
-    title: vr_meta_orcamentaria_ano1
+    target: vr_meta_orcamentaria_ano1
     type: number
   - name: Previsão Orçamentária 2025
-    title: vr_meta_orcamentaria_ano2
+    target: vr_meta_orcamentaria_ano2
     type: number
   - name: Previsão Orçamentária 2026
-    title: vr_meta_orcamentaria_ano3
+    target: vr_meta_orcamentaria_ano3
     type: number
   - name: Programa Transposto
-    title: is_programa_transposto
+    target: is_programa_transposto
     type: boolean
     trueValues: ['Sim']
     falseValues: ['Não']
   - name: Causas
-    title: causas
+    target: causas
     type: string
   - name: Título do Objetivo de Desenvolvimento Sustentável
-    title: ods_titulo
+    target: ods_titulo
     type: string
   - name: Subtítulo do Objetivo de Desenvolvimento Sustentável
-    title: ods_subtitulo
+    target: ods_subtitulo
     type: string
 primaryKey:
   - Código da Unidade Orçamentária Responsável pelo Programa
