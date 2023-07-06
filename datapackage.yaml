@@ -9,6 +9,7 @@ resources:
     encoding: windows-1252
     dialect: dialect.yaml
     schema: schemas/acoes_planejamento.yaml
+    hash: sha256:c5aa5075fb2dc53d9c58bc4afa2fdf85d0af900c97be88abdc05a12cc89b8bb2
   - name: indicadores_planejamento
     title: Relatórios e Bases do Planejamento - Indicadores
     path: data-raw/indicadores_planejamento.txt
@@ -18,6 +19,7 @@ resources:
     encoding: windows-1252
     dialect: dialect.yaml
     schema: schemas/indicadores_planejamento.yaml
+    hash: sha256:cb4b1d2ed172eb83d7d017b8c12182d28aa4b04044c50245df80f8eac172f192
   - name: localizadores_todos_planejamento
     title: Relatórios e Bases do Planejamento - Localizadores (Todos)
     path: data-raw/localizadores_todos_planejamento.txt
@@ -27,6 +29,7 @@ resources:
     encoding: windows-1252
     dialect: dialect.yaml
     schema: schemas/localizadores_todos_planejamento.yaml
+    hash: sha256:65502d93cac791438de9a3e9c8155583648778e4ad578fbc794ea3e06a0e91be
   - name: programas_planejamento
     title: Relatórios e Bases do Planejamento - Programas
     path: data-raw/programas_planejamento.txt
@@ -36,3 +39,4 @@ resources:
     encoding: windows-1252
     dialect: dialect.yaml
     schema: schemas/programas_planejamento.yaml
+    hash: sha256:8653b3eb6a6df02ad623b292248b69ab212189829ac54c2492cb18bc6c9c9142
