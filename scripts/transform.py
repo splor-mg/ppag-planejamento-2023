@@ -12,6 +12,6 @@ def transform_resource(resource_name: str, output_path: Path, descriptor: str = 
     target = transform(resource, steps=[steps.table_normalize()])
     table = target.to_petl()
     for field in resource.schema.fields:
-        if field.title:
-            table = etl.rename(table, field.name, field.title)
+        if field.custom.get('target'):
+            table = etl.rename(table, field.name, field.custom['target'])
     etl.tocsv(table, output_path, encoding='utf-8')

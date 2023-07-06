@@ -1,83 +1,83 @@
 fields:
   - name: Código do Programa
-    title: programa_cod
+    target: programa_cod
     type: integer
   - name: Nome do Programa
-    title: programa_nome
+    target: programa_nome
     type: string
   - name: Exclusão Lógica do Programa
-    title: is_deleted_programa
+    target: is_deleted_programa
     type: boolean
   - name: Indicador
-    title: indicador
+    target: indicador
     type: string
   - name: Exclusão Lógica do Indicador
-    title: is_deleted_indicador
+    target: is_deleted_indicador
     type: boolean
   - name: Unidade de Medida
-    title: unidade_de_medida
+    target: unidade_de_medida
     type: string
   - name: Índice de Referência
-    title: indice_de_referencia
+    target: indice_de_referencia
     type: string
   - name: Em apuração? (Índice de Referência)
-    title: em_apuracao_indice_de_referencia
+    target: em_apuracao_indice_de_referencia
     type: string
   - name: Data de Apuração
-    title: dt_apuracao
+    target: dt_apuracao
     type: date
     format: '%d/%m/%Y'
   - name: Previsão para 2023
-    title: previsao_para_ano0
+    target: previsao_para_ano0
     type: string
   - name: Em apuração? (2023)
-    title: em_apuracao_ano0
+    target: em_apuracao_ano0
     type: string
   - name: Previsão para 2024
-    title: previsao_para_ano1
+    target: previsao_para_ano1
     type: string
   - name: Em apuração? (2024)
-    title: em_apuracao_ano1
+    target: em_apuracao_ano1
     type: string
   - name: Previsão para 2025
-    title: previsao_para_ano2
+    target: previsao_para_ano2
     type: string
   - name: Em apuração? (2025)
-    title: em_apuracao_ano2
+    target: em_apuracao_ano2
     type: string
   - name: Previsão para 2026
-    title: previsao_para_ano3
+    target: previsao_para_ano3
     type: string
   - name: Em apuração? (2026)
-    title: em_apuracao_ano3
+    target: em_apuracao_ano3
     type: string
   - name: Fonte
-    title: fonte
+    target: fonte
     type: string
   - name: Periodicidade
-    title: periodicidade
+    target: periodicidade
     type: string
   - name: Base Geográfica
-    title: base_geografica
+    target: base_geografica
     type: string
   - name: Fórmula de Cálculo
-    title: formula_de_calculo
+    target: formula_de_calculo
     type: string
   - name: Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)
-    title: justificativa_status_apuracao_previsoes
+    target: justificativa_status_apuracao_previsoes
     type: string
   - name: Justificativa do Status em apuração do Índice de Referência
-    title: justificativa_status_apuracao_indice_ref
+    target: justificativa_status_apuracao_indice_ref
     type: string
   - name: Data Alteração
-    title: updated_at
+    target: updated_at
     type: datetime
     format: '%d/%m/%Y %H:%M:%S'
   - name: Indicador Novo?
-    title: is_indicador_new
+    target: is_indicador_new
     type: boolean
   - name: Polaridade
-    title: polaridade
+    target: polaridade
     type: string
 primaryKey:
   - Código do Programa
